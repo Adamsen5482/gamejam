@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e160f698fabc140bfa931df099b403, type: 3}
   m_Name: PlayerRoleIcons
   m_EditorClassIdentifier: 
-  MurdererIcon: {fileID: 0}
-  GhostIcon: {fileID: 0}
-  AccompliceIcon: {fileID: 0}
-  DetectiveIcon: {fileID: 0}
+  MurdererIcon: {fileID: 2919376729675945740, guid: 3f2131e1eb38e4042bbaae428760aba5,
+    type: 3}
+  GhostIcon: {fileID: -8057138193462677094, guid: 3f2131e1eb38e4042bbaae428760aba5,
+    type: 3}
+  AccompliceIcon: {fileID: -7945136198476744049, guid: 3f2131e1eb38e4042bbaae428760aba5,
+    type: 3}
+  DetectiveIcon: {fileID: 6524741277355436947, guid: 3f2131e1eb38e4042bbaae428760aba5,
+    type: 3}
