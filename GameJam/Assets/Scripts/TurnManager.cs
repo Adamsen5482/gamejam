@@ -11,12 +11,15 @@ public class TurnManager : MonoBehaviour
     public HideGamePanel HidePanel;
 
     [Required]
-    public PlayerTurn PlayerTurnSomething;
+    public PlayerTurn ShowPlayerRoleTurn;
+
+    [Required]
+    public PlayerTurn OtherStuffTurn;
 
     [HideInInspector]
-    public int Rounds;
+    public int RoundNumber;
 
-    private Queue<PlayerInfo> turnQueue;
+    private Queue<PlayerInfo> turnQueue = new Queue<PlayerInfo>();
 
     void Awake()
     {
@@ -27,15 +30,16 @@ public class TurnManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        this.turnQueue = new Queue<PlayerInfo>(PlayerList.AllPlayers);
-
         this.StartCoroutine(this.MainGameLoop());
     }
 
     private IEnumerator MainGameLoop()
     {
-        yield return null;
+        this.FillTurnQueue();
         bool gameHasEnded = false;
+        this.RoundNumber = 1;
+
+        yield return null;
 
         while (gameHasEnded == false)
         {
@@ -51,28 +55,58 @@ public class TurnManager : MonoBehaviour
                 yield return null;
             }
 
-            this.PlayerTurnSomething.gameObject.SetActive(true);
+            var turnRunner = this.SelectTurnRunner(nextPlayer);
+            turnRunner.gameObject.SetActive(true);
 
             // Show new player stuff
-            yield return this.StartCoroutine(this.PlayerTurnSomething.RunTurn(nextPlayer));
+            yield return this.StartCoroutine(turnRunner.RunTurn(nextPlayer));
 
-            this.PlayerTurnSomething.gameObject.SetActive(false);
+            turnRunner.gameObject.SetActive(false);
 
-
-            //yield return waitForEndOfTurn;
+            if (this.turnQueue.Count == 0)
+            {
+                this.RoundNumber++;
+                this.FillTurnQueue();
+            }
         }
     }
 
     public PlayerInfo NextPlayer()
     {
         var nextPlayer = this.turnQueue.Dequeue();
-        this.turnQueue.Enqueue(nextPlayer);
+        return nextPlayer;
+    }
 
-        if (nextPlayer == PlayerList.AllPlayers[0])
+    private void FillTurnQueue()
+    {
+        foreach (var p in PlayerList.AllPlayers)
         {
-            this.Rounds++;
+            this.turnQueue.Enqueue(p);
+        }
+    }
+
+    private PlayerTurn SelectTurnRunner(PlayerInfo player)
+    {
+        if (this.RoundNumber == 1)
+        {
+            return this.ShowPlayerRoleTurn;
         }
 
-        return nextPlayer;
+        return this.OtherStuffTurn;
+    }
+}
+
+
+public static class QueueExtensions
+{
+    public static Queue<T> ToQueue<T>(this IEnumerable<T> collection)
+    {
+        var queue = new Queue<T>();
+        foreach (var item in collection)
+        {
+            queue.Enqueue(item);
+        }
+
+        return queue;
     }
 }
