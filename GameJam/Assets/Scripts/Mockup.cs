@@ -42,11 +42,12 @@ public static class PlayerList
                 "Sony",
                 "Xbox",
                 "Switch",
+                "Hello",
+                "World",
+                "Damm",
             }
             .Select(x => new PlayerInfo() { Name = x })
             .ToList() );
-
-        //GameSetup.AssignRoles(Enumerable.Range(0, 5).Select(x => new PlayerInfo { Name = Guid.NewGuid().ToString() }).ToList());
     }
 #endif
 }
@@ -74,15 +75,15 @@ public static class GameSetup
 
         int accomplices = 0;
 
-        if (temp.Count >= 5)
+        if (temp.Count <= 5)
         {
             accomplices = 0;
         }
-        else if (temp.Count >= 7)
+        else if (temp.Count <= 7)
         {
             accomplices = 1;
         }
-        else if (temp.Count >= 9)
+        else if (temp.Count <= 9)
         {
             accomplices = 2;
         }
@@ -112,6 +113,14 @@ public static class GameSetup
             d.Role = PlayerRole.Detective;
             PlayerList.Detectives.Add(d);
         }
+
+        Debug.Log($@"Roles assigned with {PlayerList.AllPlayers.Count} players
+Murderer: {PlayerList.Murderer.Name}
+Ghost: {PlayerList.Ghost.Name}
+Detectives: {PlayerList.Detectives.Count}
+{string.Join("\n", PlayerList.Detectives.Select(x => " - " + x.Name))}
+Accomplices: {PlayerList.Accomplices.Count}
+{string.Join("\n", PlayerList.Accomplices.Select(x => " - " + x.Name))}");
     }
 
     private static PlayerInfo PickAndRemove(List<PlayerInfo> players)

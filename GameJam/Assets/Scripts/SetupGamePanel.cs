@@ -43,16 +43,20 @@ public class SetupGamePanel : MonoBehaviour
         this.addedPlayers.Clear();
         this.PlayerNameField.text = string.Empty;
         this.PlayerNamesText.text = string.Empty;
+        this.PlayerNameField.interactable = true;
     }
 
     private void Update()
     {
-        var name = this.PlayerNameField.text.Trim();
-        if (this.addedPlayers.Count > this.RequiredPlayerCount.y)
+        if (this.addedPlayers.Count >= this.RequiredPlayerCount.y)
         {
             this.AddPlayerButton.interactable = false;
+            this.PlayerNameField.interactable = false;
+            return;
         }
-        else if (string.IsNullOrEmpty(name))
+
+        var name = this.PlayerNameField.text.Trim();
+        if (string.IsNullOrEmpty(name))
         {
             this.AddPlayerButton.interactable = false;
         }
@@ -69,7 +73,6 @@ public class SetupGamePanel : MonoBehaviour
     private void OnStartClicked()
     {
         GameSetup.AssignRoles(this.addedPlayers);
-
         SceneManager.LoadScene(this.GameScenePath);
     }
 

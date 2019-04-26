@@ -52,7 +52,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     }
                     else
                     {
-                        accomplicesText = $"Your accomplices are {PlayerList.Accomplices.Take(count - 1).Select(x => x.Name)} and {PlayerList.Accomplices[count - 1].Name}.";
+                        accomplicesText = $"Your accomplices are {string.Join(", ", PlayerList.Accomplices.Take(count - 1).Select(x => x.Name))} and {PlayerList.Accomplices[count - 1].Name}.";
                     }
 
                     return $"You are the murderer!\n{accomplicesText}\n{ghostPlayerText}";
@@ -68,7 +68,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     int count = other.Count;
                     if (count == 0)
                     {
-                        accomplicesText = "You other accomplices.";
+                        accomplicesText = "You have no other accomplices.";
                     }
                     else if (count == 1)
                     {
@@ -76,7 +76,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     }
                     else
                     {
-                        accomplicesText = $"The other accomplices are {other.Take(count - 1).Select(x => x.Name)} and {other[count - 1].Name}.";
+                        accomplicesText = $"The other accomplices are {string.Join(", ", other.Take(count - 1).Select(x => x.Name))} and {other[count - 1].Name}.";
                     }
 
                     return $"You are an accomplice!\nThe murderer is {PlayerList.Murderer.Name}.\n{accomplicesText}\n{ghostPlayerText}";
