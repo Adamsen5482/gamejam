@@ -1290,6 +1290,7 @@ MonoBehaviour:
   ClearButton: {fileID: 570845707}
   PlayerNameField: {fileID: 300232822}
   PlayerNamesText: {fileID: 1485137702}
+  GameScenePath: Assets/Scenes/GameScene.unity
   RequiredPlayerCount: {x: 5, y: 9}
 --- !u!1 &1707919767
 GameObject:

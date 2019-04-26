@@ -30,6 +30,14 @@ public static class PlayerList
     public static List<PlayerInfo> Accomplices = new List<PlayerInfo>();
 
     public static List<PlayerInfo> Detectives = new List<PlayerInfo>();
+
+#if UNITY_EDITOR
+    [UnityEditor.InitializeOnLoadMethod]
+    private static void AddRandomPlayersInEditor()
+    {
+        GameSetup.AssignRoles(Enumerable.Range(0, 5).Select(x => new PlayerInfo { Name = Guid.NewGuid().ToString() }).ToList());
+    }
+#endif
 }
 
 [Serializable]

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SetupGamePanel : MonoBehaviour
@@ -16,6 +17,9 @@ public class SetupGamePanel : MonoBehaviour
     public InputField PlayerNameField;
     [Required]
     public Text PlayerNamesText;
+
+    [Required, FilePath(Extensions = ".unity")]
+    public string GameScenePath;
 
     [MinMaxSlider(1, 15, ShowFields = true)]
     public Vector2Int RequiredPlayerCount;
@@ -65,6 +69,8 @@ public class SetupGamePanel : MonoBehaviour
     private void OnStartClicked()
     {
         GameSetup.AssignRoles(this.addedPlayers);
+
+        SceneManager.LoadScene(this.GameScenePath);
     }
 
     private void OnAddPlayerClicked()
