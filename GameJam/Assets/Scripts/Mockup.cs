@@ -1,6 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public enum PlayerRole
@@ -26,9 +27,9 @@ public static class PlayerList
 
     public static PlayerInfo Ghost;
 
-    public static List<PlayerInfo> Accomplices;
+    public static List<PlayerInfo> Accomplices = new List<PlayerInfo>();
 
-    public static List<PlayerInfo> Detectives;
+    public static List<PlayerInfo> Detectives = new List<PlayerInfo>();
 }
 
 [Serializable]
@@ -50,17 +51,19 @@ public static class GameSetup
         PlayerList.Accomplices.Clear();
         PlayerList.Detectives.Clear();
 
+        var temp = players.ToList();
+
         int accomplices = 0;
 
-        if (players.Count >= 5)
+        if (temp.Count >= 5)
         {
             accomplices = 0;
         }
-        else if (players.Count >= 7)
+        else if (temp.Count >= 7)
         {
             accomplices = 1;
         }
-        else if (players.Count >= 9)
+        else if (temp.Count >= 9)
         {
             accomplices = 2;
         }
@@ -69,24 +72,24 @@ public static class GameSetup
             throw new InvalidOperationException("We do not support that number of players :C");
         }
 
-        var murder = PickAndRemove(players);
+        var murder = PickAndRemove(temp);
         murder.Role = PlayerRole.Murder;
         PlayerList.Murder = murder;
 
-        var ghost = PickAndRemove(players);
+        var ghost = PickAndRemove(temp);
         ghost.Role = PlayerRole.Ghost;
         PlayerList.Ghost = ghost;
 
         for (int i = 0; i < accomplices; i++)
         {
-            var a = PickAndRemove(players);
+            var a = PickAndRemove(temp);
             a.Role = PlayerRole.Accomplice;
             PlayerList.Accomplices.Add(a);
         }
 
-        while (players.Count > 0)
+        while (temp.Count > 0)
         {
-            var d = PickAndRemove(players);
+            var d = PickAndRemove(temp);
             d.Role = PlayerRole.Detective;
             PlayerList.Detectives.Add(d);
         }

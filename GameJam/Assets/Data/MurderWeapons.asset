@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26961c8ba2339c429c0d465af95af90, type: 3}
   m_Name: MurderWeapons
   m_EditorClassIdentifier: 
-  Weapons: []
+  Weapons:
+  - Name: Hammer
+    Icon: {fileID: 0}
+  - Name: Sword
+    Icon: {fileID: 0}
+  - Name: Gun
+    Icon: {fileID: 0}
+  - Name: Grenade
+    Icon: {fileID: 0}
+  - Name: Candle Stick
+    Icon: {fileID: 0}
