@@ -134,3 +134,7 @@ MonoBehaviour:
     - {r: 0.647, g: 0.745, b: 0.957, a: 1}
     - {r: 0.725, g: 0.863, b: 0.973, a: 1}
     - {r: 0.89, g: 0.945, b: 0.996, a: 1}
+  - name: Palette Name
+    showAlpha: 0
+    colors:
+    - {r: 0, g: 0.06666667, b: 0.14117648, a: 1}
