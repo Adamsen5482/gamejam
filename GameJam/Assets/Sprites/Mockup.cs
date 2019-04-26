@@ -52,20 +52,21 @@ public static class GameSetup
 
         int accomplices = 0;
 
-        switch (players.Count)
+        if (players.Count >= 5)
         {
-            case 5:
-                break;
-            case 6:
-            case 7:
-                accomplices = 1;
-                break;
-            case 8:
-            case 9:
-                accomplices = 2;
-                break;
-            default:
-                throw new InvalidOperationException("We do not support that number of players :C");
+            accomplices = 0;
+        }
+        else if (players.Count >= 7)
+        {
+            accomplices = 1;
+        }
+        else if (players.Count >= 9)
+        {
+            accomplices = 2;
+        }
+        else
+        {
+            throw new InvalidOperationException("We do not support that number of players :C");
         }
 
         var murder = PickAndRemove(players);
