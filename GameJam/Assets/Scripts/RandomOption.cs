@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class RandomOption : MonoBehaviour
 {
    
@@ -21,7 +22,6 @@ public class RandomOption : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
-  
 
     string random3Options(string rigth, string wrong1, string wrong2)
     {

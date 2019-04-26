@@ -7,7 +7,7 @@ using UnityEngine;
 public enum PlayerRole
 {
     Error = 0,
-    Murder,
+    Murderer,
     Ghost,
     Accomplice,
     Detective,
@@ -23,7 +23,7 @@ public static class PlayerList
 {
     public static List<PlayerInfo> AllPlayers = new List<PlayerInfo>();
 
-    public static PlayerInfo Murder;
+    public static PlayerInfo Murderer;
 
     public static PlayerInfo Ghost;
 
@@ -46,7 +46,7 @@ public static class GameSetup
     {
         PlayerList.AllPlayers.Clear();
         PlayerList.AllPlayers.AddRange(players);
-        PlayerList.Murder = null;
+        PlayerList.Murderer = null;
         PlayerList.Ghost = null;
         PlayerList.Accomplices.Clear();
         PlayerList.Detectives.Clear();
@@ -73,8 +73,8 @@ public static class GameSetup
         }
 
         var murder = PickAndRemove(temp);
-        murder.Role = PlayerRole.Murder;
-        PlayerList.Murder = murder;
+        murder.Role = PlayerRole.Murderer;
+        PlayerList.Murderer = murder;
 
         var ghost = PickAndRemove(temp);
         ghost.Role = PlayerRole.Ghost;
