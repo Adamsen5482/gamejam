@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Role
+public enum PlayerRole
 {
     Error = 0,
     Murder,
@@ -15,13 +15,20 @@ public enum Role
 public class PlayerInfo
 {
     public string Name;
-    public Color Color;
-    public Role Role;
+    public PlayerRole Role;
 }
 
 public static class PlayerList
 {
     public static List<PlayerInfo> Players = new List<PlayerInfo>();
+
+    public static PlayerInfo Murder;
+
+    public static PlayerInfo Ghost;
+
+    public static List<PlayerInfo> Accomplices;
+
+    public static List<PlayerInfo> Detectives;
 }
 
 [Serializable]
@@ -34,16 +41,61 @@ public class Weapon
 
 public static class GameSetup
 {
-    public static void SetupNewGame(List<PlayerInfo> players)
+    public static void AssignRoles(List<PlayerInfo> players)
     {
         PlayerList.Players.Clear();
+        PlayerList.Players.AddRange(players);
+        PlayerList.Murder = null;
+        PlayerList.Ghost = null;
+        PlayerList.Accomplices.Clear();
+        PlayerList.Detectives.Clear();
 
-        // Assign roles
+        int accomplices = 0;
+
+        switch (players.Count)
+        {
+            case 5:
+                break;
+            case 6:
+            case 7:
+                accomplices = 1;
+                break;
+            case 8:
+            case 9:
+                accomplices = 2;
+                break;
+            default:
+                throw new InvalidOperationException("We do not support that number of players :C");
+        }
+
+        var murder = PickAndRemove(players);
+        murder.Role = PlayerRole.Murder;
+        PlayerList.Murder = murder;
+
+        var ghost = PickAndRemove(players);
+        ghost.Role = PlayerRole.Ghost;
+        PlayerList.Ghost = ghost;
+
+        for (int i = 0; i < accomplices; i++)
+        {
+            var a = PickAndRemove(players);
+            a.Role = PlayerRole.Accomplice;
+            PlayerList.Accomplices.Add(a);
+        }
+
+        while (players.Count > 0)
+        {
+            var d = PickAndRemove(players);
+            d.Role = PlayerRole.Detective;
+            PlayerList.Detectives.Add(d);
+        }
     }
 
-
-    private static PlayerInfo PickRandom(List<PlayerInfo> players)
+    private static PlayerInfo PickAndRemove(List<PlayerInfo> players)
     {
-        return players[UnityEngine.Random.Range(0, players.Count)];
+        int index = UnityEngine.Random.Range(0, players.Count);
+        var p = players[index];
+        players.RemoveAt(index);
+        return p;
     }
 }
