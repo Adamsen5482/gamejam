@@ -10,7 +10,7 @@ public class ShowPlayerNameAndRoleTurn : PlayerTurn
 
     private void Start()
     {
-        this.EndTurnButton.onClick.AddListener(() => this.waitForEndTurn = false);
+        this.EndTurnButton.onClick.AddListener(this.EndTurn);
     }
 
     public override IEnumerator RunTurn(PlayerInfo player)
@@ -22,5 +22,10 @@ public class ShowPlayerNameAndRoleTurn : PlayerTurn
         {
             yield return null;
         }
+    }
+
+    public void EndTurn()
+    {
+        this.waitForEndTurn = false;
     }
 }

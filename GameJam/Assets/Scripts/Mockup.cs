@@ -35,7 +35,18 @@ public static class PlayerList
     [UnityEditor.InitializeOnLoadMethod]
     private static void AddRandomPlayersInEditor()
     {
-        GameSetup.AssignRoles(Enumerable.Range(0, 5).Select(x => new PlayerInfo { Name = Guid.NewGuid().ToString() }).ToList());
+        GameSetup.AssignRoles(new string[]
+            {
+                "Mommy",
+                "Daddy",
+                "Sony",
+                "Xbox",
+                "Switch",
+            }
+            .Select(x => new PlayerInfo() { Name = x })
+            .ToList() );
+
+        //GameSetup.AssignRoles(Enumerable.Range(0, 5).Select(x => new PlayerInfo { Name = Guid.NewGuid().ToString() }).ToList());
     }
 #endif
 }

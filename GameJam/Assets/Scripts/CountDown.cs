@@ -1,64 +1,75 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 public class CountDown : MonoBehaviour
 {
-
-    public float totalTimeInSeconds;
-    public GameObject timerUI;
-    public static CountDown instance = null;
-    public bool timerisout = false;
-    // Start is called before the first frame update
+    public float totalTimeInSeconds = 10;
+    public Text timerUI;
+    public bool timerisout = true;
+    public bool startRunningOnEnable = false;
 
 
-    void Awake()
+    private float remainingTime;
+
+    public UnityEvent onTimeOut;
+
+    private void OnEnable()
     {
-
-        if (instance == null)
-
-            instance = this;
+        if (this.startRunningOnEnable)
+        {
+            this.startTimer(this.totalTimeInSeconds);
+        }
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         if (timerisout == false)
         {
 
-            totalTimeInSeconds -= Time.deltaTime;
-            UpdateLevelTimer(totalTimeInSeconds);
-            if (totalTimeInSeconds < 1)
+            this.remainingTime -= Time.deltaTime;
+            UpdateLevelTimer(this.remainingTime);
+            if (remainingTime < 0)
             {
                 timerisout = true;
+                this.onTimeOut.Invoke();
             }
         }
     }
 
-    public void startTimer(int timeSeconds)
+    public void startTimer(float timeSeconds)
     {
         timerisout = false;
-        totalTimeInSeconds = timeSeconds;
+        this.remainingTime = timeSeconds;
     }
 
     public void stopTimer()
     {
         timerisout = true;
     }
-    public void UpdateLevelTimer(float totalSeconds)
+    public void UpdateLevelTimer(float remainingTime)
     {
-        int minutes = Mathf.FloorToInt(totalSeconds / 60f);
-        int seconds = Mathf.RoundToInt(totalSeconds % 60f);
+        int minutes;
+        int seconds;
 
-        string formatedSeconds = seconds.ToString();
-
-        if (seconds == 60)
+        if (remainingTime > 0)
         {
+            minutes = Mathf.FloorToInt(remainingTime / 60f);
+            seconds = Mathf.RoundToInt(remainingTime % 60f);
+
+            if (seconds == 60)
+            {
+                seconds = 0;
+                minutes += 1;
+            }
+        }
+        else
+        {
+            minutes = 0;
             seconds = 0;
-            minutes += 1;
         }
 
-        GetComponent<Text>().text = minutes.ToString("00") + "." + seconds.ToString("00");
+        this.timerUI.text = minutes.ToString("00") + ":" + seconds.ToString("00");
     }
 }

@@ -8,31 +8,24 @@ public class TurnManager : MonoBehaviour
     public static TurnManager instance = null;
 
     [Required]
-    public GameObject HidePanel;
+    public HideGamePanel HidePanel;
 
     [Required]
     public PlayerTurn PlayerTurnSomething;
 
     [HideInInspector]
     public int Rounds;
+
     private Queue<PlayerInfo> turnQueue;
-
-
 
     void Awake()
     {
-
         if (instance == null)
-
             instance = this;
-
         else if (instance != this)
-
             Destroy(gameObject);
 
-
         DontDestroyOnLoad(gameObject);
-
 
         this.turnQueue = new Queue<PlayerInfo>(PlayerList.AllPlayers);
 
@@ -51,8 +44,9 @@ public class TurnManager : MonoBehaviour
             Debug.Log("Next player: " + nextPlayer.Name);
 
             // Show hide panel
-            this.HidePanel.SetActive(true); // TODO: Show name of next player
-            while (this.HidePanel.activeSelf)
+            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer));
+
+            while (this.HidePanel.IsVisible)
             {
                 yield return null;
             }
