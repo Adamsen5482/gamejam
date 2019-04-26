@@ -21,7 +21,7 @@ public class PlayerInfo
 
 public static class PlayerList
 {
-    public static List<PlayerInfo> Players = new List<PlayerInfo>();
+    public static List<PlayerInfo> AllPlayers = new List<PlayerInfo>();
 
     public static PlayerInfo Murder;
 
@@ -44,8 +44,8 @@ public static class GameSetup
 {
     public static void AssignRoles(List<PlayerInfo> players)
     {
-        PlayerList.Players.Clear();
-        PlayerList.Players.AddRange(players);
+        PlayerList.AllPlayers.Clear();
+        PlayerList.AllPlayers.AddRange(players);
         PlayerList.Murder = null;
         PlayerList.Ghost = null;
         PlayerList.Accomplices.Clear();
