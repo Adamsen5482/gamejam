@@ -2,11 +2,14 @@
 using System;
 using System.Collections;
 using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ShowPlayerRoleTurn : PlayerTurn
 {
-    [Required] public Text PlayerNameText;
+    [Required] public RoleIcons Icons;
+
+    [Required] public Image RoleIconImage;
     [Required] public Text PlayerRoleText;
     [Required] public Text FlavorText;
     [Required] public Button EndTurnButton;
@@ -22,8 +25,8 @@ public class ShowPlayerRoleTurn : PlayerTurn
     {
         this.waitForEndOfTurn = true;
 
-        this.PlayerNameText.text = player.Name;
-        this.PlayerRoleText.text = player.Role.ToString();
+        this.PlayerRoleText.text = player.Role.ToString().ToUpper();
+        this.RoleIconImage.sprite = this.Icons.GetRoleIcon(player.Role);
         this.FlavorText.text = this.FillFlavorText(player);
 
         while (this.waitForEndOfTurn)
@@ -44,22 +47,22 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     int count = PlayerList.Accomplices.Count;
                     if (count == 0)
                     {
-                        accomplicesText = "You have no accomplices.";
+                        accomplicesText = "YOU HAVE NO FRIENDS.";
                     }
                     else if (count == 1)
                     {
-                        accomplicesText = $"Your accomplice is {PlayerList.Accomplices[0].Name}.";
+                        accomplicesText = $"YOUR FRIEND IS {PlayerList.Accomplices[0].Name.FormatPlayerName()}.";
                     }
                     else
                     {
-                        accomplicesText = $"Your accomplices are {string.Join(", ", PlayerList.Accomplices.Take(count - 1).Select(x => x.Name))} and {PlayerList.Accomplices[count - 1].Name}.";
+                        accomplicesText = $"YOUR ACCOMPLICES ARE {string.Join(", ", PlayerList.Accomplices.Take(count - 1).Select(x => x.Name.FormatPlayerName()))} and {PlayerList.Accomplices[count - 1].Name.FormatPlayerName()}.";
                     }
 
-                    return $"You are the murderer!\n{accomplicesText}\n{ghostPlayerText}";
+                    return $"YOU ARE THE MURDERER!\n{accomplicesText}\n{ghostPlayerText}";
                 }
 
             case PlayerRole.Ghost:
-                return "You are the ghost! You are dead :C";
+                return "YOU ARE THE GHOST!";
 
             case PlayerRole.Accomplice:
                 {
@@ -68,18 +71,18 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     int count = other.Count;
                     if (count == 0)
                     {
-                        accomplicesText = "You have no other accomplices.";
+                        accomplicesText = "YOU HAVE NO FRIENDS.";
                     }
                     else if (count == 1)
                     {
-                        accomplicesText = $"The other accomplice is {other[0].Name}.";
+                        accomplicesText = $"YOUR FRIEND IS {other[0].Name.FormatPlayerName()}.";
                     }
                     else
                     {
-                        accomplicesText = $"The other accomplices are {string.Join(", ", other.Take(count - 1).Select(x => x.Name))} and {other[count - 1].Name}.";
+                        accomplicesText = $"YOUR FRIENDS ARE {string.Join(", ", other.Take(count - 1).Select(x => x.Name.FormatPlayerName()))} AND {other[count - 1].Name.FormatPlayerName()}.";
                     }
 
-                    return $"You are an accomplice!\nThe murderer is {PlayerList.Murderer.Name}.\n{accomplicesText}\n{ghostPlayerText}";
+                    return $"YOU ARE AN ACCOMPLICE!\nTHE MURDERER IS {PlayerList.Murderer.Name.FormatPlayerName()}.\n{accomplicesText}\n{ghostPlayerText}";
                 }
 
             case PlayerRole.Detective:
@@ -87,18 +90,18 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     string accomplicesText;
                     if (PlayerList.Accomplices.Count == 0)
                     {
-                        accomplicesText = "!";
+                        accomplicesText = "";
                     }
                     else if (PlayerList.Accomplices.Count == 1)
                     {
-                        accomplicesText = $" and his 1 accomplice!";
+                        accomplicesText = $" AND THEIR 1 ACCOMPLICE";
                     }
                     else
                     {
-                        accomplicesText = $" and his {PlayerList.Accomplices.Count} accomplices!";
+                        accomplicesText = $" AND THEIR {PlayerList.Accomplices.Count} ACCOMPLICES";
                     }
 
-                    return $"You are a detective!\nFind out who the murderer is{accomplicesText}\n{ghostPlayerText}";
+                    return $"YOU ARE THE DETECTIVE!\nFIND OUT WHO THE MURDERER{accomplicesText} IS!\n{ghostPlayerText}";
                 }
 
             case PlayerRole.Error:
@@ -108,5 +111,13 @@ public class ShowPlayerRoleTurn : PlayerTurn
                 throw new InvalidOperationException("Unknown role: " + player.Role);
         }
 
+    }
+}
+
+public static class StringUtils
+{
+    public static string FormatPlayerName(this string name)
+    {
+        return $"<color=#FF585D>{name.ToUpper()}</color>";
     }
 }
