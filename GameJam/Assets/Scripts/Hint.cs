@@ -26,19 +26,26 @@ public class Hint : ScriptableObject
         }
         var h= hintmap[location];
 
-        return h[UnityEngine.Random.Range(0, h.Count)]
+        var queue = PlayerList.AllPlayers
+            .Where(x => x.Role != PlayerRole.Ghost)
+            .Where(x => x.Role != PlayerRole.Murderer)
+            .Shuffle()
+            .ToQueue();
+
+        string text = h[UnityEngine.Random.Range(0, h.Count)]
             .Replace("<WEP>", this.Weapons.Weapons.Where(x => x.Type != PlayerList.MurderWeapon).PickRandom().Name.FormatName())
             .Replace("<MURDERWEAPON>", this.Weapons.GetWeaponItem(PlayerList.MurderWeapon).Name.FormatName())
             .Replace("<GHOST>", PlayerList.Ghost.Name.FormatName())
-            .Replace("<RPNoCrrNoMurNoGos>", PlayerList.AllPlayers.Where(x => x.Role != PlayerRole.Ghost || x.Role != PlayerRole.Murderer || x != currentPlayer).PickRandom().Name.FormatName())
+            .Replace("<RPNoCrrNoMurNoGos1>", queue.Dequeue().Name.FormatName())
+            .Replace("<RPNoCrrNoMurNoGos2>", queue.Dequeue().Name.FormatName())
+            .Replace("<RPNoCrrNoMurNoGos3>", queue.Dequeue().Name.FormatName())
             .Replace("<RPNoCrrNoMur>", PlayerList.AllPlayers.Where(x => x.Role != PlayerRole.Murderer || x != currentPlayer).PickRandom().Name.FormatName())
+            .Replace("<RPNoCrrNoGos>", PlayerList.AllPlayers.Where(x => x.Role != PlayerRole.Ghost || x != currentPlayer).PickRandom().Name.FormatName())
             .Replace("<RPNoCrr>", PlayerList.AllPlayers.Where(x => x != currentPlayer).PickRandom().Name.FormatName())
             .Replace("<MUR>", PlayerList.Murderer.Name.FormatName())
             .Replace("<RP>", PlayerList.AllPlayers.PickRandom().Name.FormatName())
-          //  .Replace("<RandomAccomplice>", PlayerList.Accomplices.PickRandom().Name.FormatName())
-          
-            .Replace("<RPNoCrrNoGos>", PlayerList.AllPlayers.Where(x => x.Role != PlayerRole.Ghost || x != currentPlayer).PickRandom().Name.FormatName());
-       
+            ;
+        return text;
     }
 }
 
