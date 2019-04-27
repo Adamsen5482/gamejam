@@ -26,25 +26,33 @@ public class Hint : ScriptableObject
         }
         var h= hintmap[location];
 
-        var queue = PlayerList.AllPlayers
+        var playerQueue = PlayerList.AllPlayers
             .Where(x => x.Role != PlayerRole.Ghost)
             .Where(x => x.Role != PlayerRole.Murderer)
             .Shuffle()
             .ToQueue();
 
+        var weaponQueue = this.Weapons.Weapons
+            .Where(x => x.Type != PlayerList.MurderWeapon)
+            .Shuffle()
+            .ToQueue();
+
         string text = h[UnityEngine.Random.Range(0, h.Count)]
-            .Replace("<WEP>", this.Weapons.Weapons.Where(x => x.Type != PlayerList.MurderWeapon).PickRandom().Name.FormatName())
+            .Replace("<WEP>", weaponQueue.Dequeue().Name.FormatName())
+            .Replace("<WEP2>", weaponQueue.Dequeue().Name.FormatName())
+            .Replace("<WEP3>", weaponQueue.Dequeue().Name.FormatName())
             .Replace("<MURDERWEAPON>", this.Weapons.GetWeaponItem(PlayerList.MurderWeapon).Name.FormatName())
             .Replace("<GHOST>", PlayerList.Ghost.Name.FormatName())
-            .Replace("<RPNoCrrNoMurNoGos1>", queue.Dequeue().Name.FormatName())
-            .Replace("<RPNoCrrNoMurNoGos2>", queue.Dequeue().Name.FormatName())
-            .Replace("<RPNoCrrNoMurNoGos3>", queue.Dequeue().Name.FormatName())
-            // use once
+            .Replace("<RPNoCrrNoMurNoGos1>", playerQueue.Dequeue().Name.FormatName())
+            .Replace("<RPNoCrrNoMurNoGos2>", playerQueue.Dequeue().Name.FormatName())
+            .Replace("<RPNoCrrNoMurNoGos3>", playerQueue.Dequeue().Name.FormatName())
+            // Use once
             .Replace("<RPNoCrrNoMur>", PlayerList.AllPlayers.Where(x => x.Role != PlayerRole.Murderer || x != currentPlayer).PickRandom().Name.FormatName())
             .Replace("<RPNoCrrNoGos>", PlayerList.AllPlayers.Where(x => x.Role != PlayerRole.Ghost || x != currentPlayer).PickRandom().Name.FormatName())
             .Replace("<RPNoCrr>", PlayerList.AllPlayers.Where(x => x != currentPlayer).PickRandom().Name.FormatName())
             .Replace("<MUR>", PlayerList.Murderer.Name.FormatName())
             .Replace("<RP>", PlayerList.AllPlayers.PickRandom().Name.FormatName())
+            .Replace("<LIE>", currentPlayer.Name.FormatName())
             ;
         return text;
     }
@@ -69,6 +77,7 @@ public enum Location
 [Serializable]
 public class HintItem 
 {
+    [TableColumnWidth(80, Resizable = false)]
     public Location Location;
     
     [TextArea]
