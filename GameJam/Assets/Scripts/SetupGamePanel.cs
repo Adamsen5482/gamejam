@@ -82,7 +82,6 @@ public class SetupGamePanel : MonoBehaviour
         if(numOfPlayers != null)
         {
             string text;
-            print(this.addedPlayers.Count);
             switch (this.addedPlayers.Count)
             {
                 case 5:
