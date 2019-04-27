@@ -78,7 +78,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: VOTE FOR THE WEAPON THAT MURDERED YOU.
+  m_Text: 'YOU WERE MURDERED, THAT WE KNOW.
+
+    BUT BY WHAT?'
 --- !u!1 &1102616209072242681
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,11 +459,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2972203973290271722}
     m_Modifications:
-    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
-        type: 3}
-      propertyPath: m_Name
-      value: VoteForWeapon (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 5305955202818126546, guid: dffb26e1406465843908bff9caf730fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -567,6 +564,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
+        type: 3}
+      propertyPath: m_Name
+      value: VoteForWeapon (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dffb26e1406465843908bff9caf730fb, type: 3}
 --- !u!224 &7863641551500432756 stripped
@@ -594,11 +596,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2972203973290271722}
     m_Modifications:
-    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
-        type: 3}
-      propertyPath: m_Name
-      value: VoteForWeapon
-      objectReference: {fileID: 0}
     - target: {fileID: 5305955202818126546, guid: dffb26e1406465843908bff9caf730fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -704,6 +701,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
+        type: 3}
+      propertyPath: m_Name
+      value: VoteForWeapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dffb26e1406465843908bff9caf730fb, type: 3}
 --- !u!224 &6982651334720382655 stripped
@@ -731,11 +733,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2972203973290271722}
     m_Modifications:
-    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
-        type: 3}
-      propertyPath: m_Name
-      value: VoteForWeapon (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5305955202818126546, guid: dffb26e1406465843908bff9caf730fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -841,6 +838,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
+        type: 3}
+      propertyPath: m_Name
+      value: VoteForWeapon (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dffb26e1406465843908bff9caf730fb, type: 3}
 --- !u!224 &8087895364841756727 stripped
@@ -868,11 +870,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2972203973290271722}
     m_Modifications:
-    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
-        type: 3}
-      propertyPath: m_Name
-      value: VoteForWeapon (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 5305955202818126546, guid: dffb26e1406465843908bff9caf730fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -978,6 +975,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
+        type: 3}
+      propertyPath: m_Name
+      value: VoteForWeapon (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dffb26e1406465843908bff9caf730fb, type: 3}
 --- !u!224 &8521619745013672661 stripped
@@ -1005,11 +1007,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2972203973290271722}
     m_Modifications:
-    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
-        type: 3}
-      propertyPath: m_Name
-      value: VoteForWeapon (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 5305955202818126546, guid: dffb26e1406465843908bff9caf730fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1114,6 +1111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776229419767539299, guid: dffb26e1406465843908bff9caf730fb,
+        type: 3}
+      propertyPath: m_Name
+      value: VoteForWeapon (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dffb26e1406465843908bff9caf730fb, type: 3}
