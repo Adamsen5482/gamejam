@@ -37,21 +37,24 @@ public static class PlayerList
     [UnityEditor.InitializeOnLoadMethod]
     private static void AddRandomPlayersInEditor()
     {
-        GameSetup.AssignRoles(new string[]
-            {
-                "Mommy",
-                "Daddy",
-                "Sony",
-                "Xbox",
-                "Switch",
-                "Hello",
-                "World",
-                "Damm",
-            }
-            .Shuffle()
-            .Take(UnityEngine.Random.Range(5, 9))
-            .Select(x => new PlayerInfo() { Name = x.ToUpper() })
-            .ToList() );
+        if (Application.isPlaying)
+        {
+            GameSetup.AssignRoles(new string[]
+                {
+                    "Mommy",
+                    "Daddy",
+                    "Sony",
+                    "Xbox",
+                    "Switch",
+                    "Hello",
+                    "World",
+                    "Damm",
+                }
+                .Shuffle()
+                .Take(UnityEngine.Random.Range(5, 9))
+                .Select(x => new PlayerInfo() { Name = x.ToUpper() })
+                .ToList() );
+        }
     }
 #endif
 }
