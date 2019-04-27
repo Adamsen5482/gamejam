@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95c001f6aeb4ed47b893dc59a3dca4e, type: 3}
   m_Name: Hint
   m_EditorClassIdentifier: 
-  mylocation: 
-  mynumber: 0
-  hintText: 
+  hintitems:
+  - Location: Lounge
+    hints:
+    - You sit in the lounge, pretending to enjoy a bestselling thriller novel. You
+      lose yourself reading the book however, and barely miss someone entering the
+      crime scene. Their hair and shape of their head reminds you of RPNoMurNoCrrNoGos.
