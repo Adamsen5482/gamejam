@@ -80,7 +80,7 @@ public class SetupGamePanel : MonoBehaviour
     {
         this.addedPlayers.Add(new PlayerInfo() { Name = this.PlayerNameField.text.Trim().ToUpper() });
         this.PlayerNameField.text = string.Empty;
-        this.PlayerNamesText.text = string.Join("\n", this.addedPlayers.Select(x => x.Name));
+        this.PlayerNamesText.text = string.Join("\n", this.addedPlayers.Select(x => x.Name.FormatName()));
 
         this.ClearButton.interactable = true;
         if (this.addedPlayers.Count >= this.RequiredPlayerCount.x)
