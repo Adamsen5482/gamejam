@@ -666,6 +666,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Axis: {x: 0, y: 0, z: 1}
   Speed: 3
+--- !u!1001 &790036109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 212927785730541931, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 267.88013
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 387.20438
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10531.423
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212927785730541904, guid: 3940bb4f375dd164da46c2a5c4fe7ad1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3940bb4f375dd164da46c2a5c4fe7ad1, type: 3}
 --- !u!1 &936860725
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +747,7 @@ GameObject:
   - component: {fileID: 936860729}
   - component: {fileID: 936860728}
   - component: {fileID: 936860727}
+  - component: {fileID: 936860730}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -746,18 +816,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 936860728}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1772536555}
-        m_MethodName: LoadScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &936860728
@@ -797,6 +856,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936860725}
   m_CullTransparentMesh: 0
+--- !u!114 &936860730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936860725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604f83ae7ee96f84eb6c2bf8868fc39a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1772536555}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  RequireDoubleClick: 1
 --- !u!1 &962061600
 GameObject:
   m_ObjectHideFlags: 0
