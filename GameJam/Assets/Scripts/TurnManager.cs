@@ -1,4 +1,5 @@
 ﻿using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 public class TurnManager : MonoBehaviour
 {
-    public static TurnManager instance = null;
+    public static TurnManager Instance = null;
 
     [Required]
     public HideGamePanel HidePanel;
@@ -15,85 +16,98 @@ public class TurnManager : MonoBehaviour
     public PlayerTurn ShowPlayerRoleTurn;
 
     [Required]
-    public PlayerTurn OtherStuffTurn;
+    public PlayerTurn PublicClueRevealTurn;
 
-    [HideInInspector]
-    public int RoundNumber;
+    [Required]
+    public PlayerTurn InvestigateLocationTurn;
+
+    [Required]
+    public PlayerTurn DiscussionTurn;
+
+    [Required]
+    public PlayerTurn VotingTurn;
 
     private Queue<PlayerInfo> turnQueue = new Queue<PlayerInfo>();
 
     void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
-
+        Instance = this;
         this.StartCoroutine(this.MainGameLoop());
     }
 
     private IEnumerator MainGameLoop()
     {
-        this.FillTurnQueue();
-        bool gameHasEnded = false;
-        this.RoundNumber = 1;
-
         yield return null;
 
-        while (gameHasEnded == false)
+        this.turnQueue = PlayerList.AllPlayers.ToQueue();
+
+        Debug.Log(">Show players their assigned role round");
+        while (this.turnQueue.Count > 0)
         {
             var nextPlayer = this.NextPlayer();
 
-            Debug.Log("Next player: " + nextPlayer.Name);
-
             // Show hide panel
-            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer));
+            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name));
 
-            while (this.HidePanel.IsVisible)
-            {
-                yield return null;
-            }
-
-            var turnRunner = this.SelectTurnRunner(nextPlayer);
-            turnRunner.gameObject.SetActive(true);
-
-            // Show new player stuff
-            yield return this.StartCoroutine(turnRunner.RunTurn(nextPlayer));
-
-            turnRunner.gameObject.SetActive(false);
-
-            if (this.turnQueue.Count == 0)
-            {
-                this.RoundNumber++;
-                this.FillTurnQueue();
-            }
+            this.ShowPlayerRoleTurn.gameObject.SetActive(true);
+            yield return this.StartCoroutine(this.ShowPlayerRoleTurn.RunTurn(nextPlayer));
+            this.ShowPlayerRoleTurn.gameObject.SetActive(false);
         }
+
+        // Public clue reveal.
+        Debug.Log(">First clue reveal");
+        yield return this.StartCoroutine(this.HidePanel.ShowHidePanel("EVERYONE"));
+
+        this.PublicClueRevealTurn.gameObject.SetActive(true);
+        yield return this.StartCoroutine(this.PublicClueRevealTurn.RunTurn(null));
+        this.PublicClueRevealTurn.gameObject.SetActive(false);
+
+        // Visit locations
+        Debug.Log(">Visit and investigate locations round.");
+        this.turnQueue = PlayerList.AllPlayers.Shuffle().ToQueue();
+        while (this.turnQueue.Count > 0)
+        {
+            var nextPlayer = this.NextPlayer();
+            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name));
+
+
+            this.InvestigateLocationTurn.gameObject.SetActive(true);
+            yield return this.StartCoroutine(this.InvestigateLocationTurn.RunTurn(nextPlayer));
+            this.InvestigateLocationTurn.gameObject.SetActive(false);
+        }
+
+        // Discussion turn!
+        Debug.Log(">Discussion round.");
+        yield return this.HidePanel.ShowHidePanel("EVERYONE");
+        this.DiscussionTurn.gameObject.SetActive(true);
+        yield return this.StartCoroutine(this.DiscussionTurn.RunTurn(null));
+        this.DiscussionTurn.gameObject.SetActive(false);
+
+        // Voting turn!
+        Debug.Log(">Voting turn.");
+        this.turnQueue = PlayerList.AllPlayers
+            .Where(x => x.Role != PlayerRole.Ghost)
+            .Shuffle()
+            .AppendWith(PlayerList.Ghost)
+            .ToQueue();
+        while (this.turnQueue.Count > 0)
+        {
+            var nextPlayer = this.NextPlayer();
+            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name));
+
+            this.VotingTurn.gameObject.SetActive(true);
+            yield return this.StartCoroutine(this.VotingTurn.RunTurn(nextPlayer));
+            this.VotingTurn.gameObject.SetActive(false);
+        }
+
+        Debug.Log(">End of game.");
     }
 
     public PlayerInfo NextPlayer()
     {
         var nextPlayer = this.turnQueue.Dequeue();
+        Debug.Log("Next player: " + nextPlayer.Name);
         return nextPlayer;
-    }
-
-    private void FillTurnQueue()
-    {
-        foreach (var p in PlayerList.AllPlayers.Shuffle())
-        {
-            this.turnQueue.Enqueue(p);
-        }
-    }
-
-    private PlayerTurn SelectTurnRunner(PlayerInfo player)
-    {
-        if (this.RoundNumber == 1)
-        {
-            return this.ShowPlayerRoleTurn;
-        }
-
-        return this.OtherStuffTurn;
     }
 }
 

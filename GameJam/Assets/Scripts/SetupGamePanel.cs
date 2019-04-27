@@ -55,7 +55,7 @@ public class SetupGamePanel : MonoBehaviour
             return;
         }
 
-        var name = this.PlayerNameField.text.Trim();
+        var name = this.PlayerNameField.text.Trim().ToUpper();
         if (string.IsNullOrEmpty(name))
         {
             this.AddPlayerButton.interactable = false;
@@ -78,7 +78,7 @@ public class SetupGamePanel : MonoBehaviour
 
     private void OnAddPlayerClicked()
     {
-        this.addedPlayers.Add(new PlayerInfo() { Name = this.PlayerNameField.text.Trim() });
+        this.addedPlayers.Add(new PlayerInfo() { Name = this.PlayerNameField.text.Trim().ToUpper() });
         this.PlayerNameField.text = string.Empty;
         this.PlayerNamesText.text = string.Join("\n", this.addedPlayers.Select(x => x.Name));
 

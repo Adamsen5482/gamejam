@@ -1,33 +1,44 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HideGamePanel : MonoBehaviour
 {
+    [Required]
     public Text PlayerName;
 
-    [HideInInspector]
-    public bool IsVisible;
+    [Required]
+    public Text FlavorText;
 
-    public IEnumerator ShowHidePanel(PlayerInfo player)
+    [Required]
+    public SmartButton ConfirmButton;
+    
+    private bool waitForConfirm;
+
+    private void Start()
     {
-        this.IsVisible = true;
-        this.PlayerName.text = player.Name;
-        this.gameObject.SetActive(true);
-
-        yield return null;
+        this.ConfirmButton.ClickAction.AddListener(() => this.StartCoroutine(this.HideHidePanelCoroutine()));
     }
 
-    public void HideHidePanel()
+    public IEnumerator ShowHidePanel(string name, string flavorText = null)
     {
-        this.StartCoroutine(this.HideHidePanelCoroutine());
+        this.PlayerName.text = name.ToUpper();
+        this.FlavorText.text = flavorText;
+        this.gameObject.SetActive(true);
+
+        this.waitForConfirm = true;
+        while (this.waitForConfirm)
+        {
+            yield return null;
+        }
     }
 
     public IEnumerator HideHidePanelCoroutine()
     {
-        Debug.Log("Hiding panel...");
+        this.waitForConfirm = false;
         yield return null;
         this.gameObject.SetActive(false);
-        this.IsVisible = false;
     }
 }

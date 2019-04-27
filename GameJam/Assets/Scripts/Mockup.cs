@@ -48,7 +48,7 @@ public static class PlayerList
                 //"World",
                 //"Damm",
             }
-            .Select(x => new PlayerInfo() { Name = x })
+            .Select(x => new PlayerInfo() { Name = x.ToUpper() })
             .ToList() );
     }
 #endif
@@ -65,19 +65,19 @@ public static class GameSetup
         PlayerList.Accomplices.Clear();
         PlayerList.Detectives.Clear();
 
-        var temp = players.ToList();
+        var queue = players.Shuffle().ToQueue();
 
         int accomplices = 0;
 
-        if (temp.Count <= 5)
+        if (players.Count <= 5)
         {
             accomplices = 0;
         }
-        else if (temp.Count <= 7)
+        else if (players.Count <= 7)
         {
             accomplices = 1;
         }
-        else if (temp.Count <= 9)
+        else if (players.Count <= 9)
         {
             accomplices = 2;
         }
@@ -86,32 +86,30 @@ public static class GameSetup
             throw new InvalidOperationException("We do not support that number of players :C");
         }
 
-        var murder = PickAndRemove(temp);
+        var murder = queue.Dequeue();
         murder.Role = PlayerRole.Murderer;
         PlayerList.Murderer = murder;
 
-        var ghost = PickAndRemove(temp);
+        var ghost = queue.Dequeue();
         ghost.Role = PlayerRole.Ghost;
         PlayerList.Ghost = ghost;
 
         for (int i = 0; i < accomplices; i++)
         {
-            var a = PickAndRemove(temp);
+            var a = queue.Dequeue();
             a.Role = PlayerRole.Accomplice;
             PlayerList.Accomplices.Add(a);
         }
 
-        while (temp.Count > 0)
+        while (queue.Count > 0)
         {
-            var d = PickAndRemove(temp);
+            var d = queue.Dequeue();
             d.Role = PlayerRole.Detective;
             PlayerList.Detectives.Add(d);
         }
 
         PlayerList.MurderWeapon = (Weapons)UnityEngine.Random.Range(1, 6);
-
-        //PlayerList.MurderWeapon = weapons.Weapons.PickRandom();
-
+        
         Debug.Log($@"Roles assigned with {PlayerList.AllPlayers.Count} players
 Murderer: {PlayerList.Murderer.Name}
 Ghost: {PlayerList.Ghost.Name}
