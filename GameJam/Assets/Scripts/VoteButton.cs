@@ -15,10 +15,10 @@ public class VoteButton : MonoBehaviour
     public Color SelectedColor;
 
     public UnityEvent OnSelect;
-    public PlayerInfoEvent OnConfirmVote;
+    public UnityEventString OnConfirmVote;
 
     [NonSerialized]
-    public PlayerInfo Player;
+    public string SelectedItemName;
 
     private void Start()
     {
@@ -31,10 +31,10 @@ public class VoteButton : MonoBehaviour
         this.ResetSelection();
     }
 
-    public void SetPlayer(PlayerInfo player)
+    public void SetItem(string selectedItemName)
     {
-        this.Player = player;
-        this.VoteLabel.text = this.Player.Name;
+        this.SelectedItemName = selectedItemName;
+        this.VoteLabel.text = selectedItemName;
     }
 
     public void ResetSelection()
@@ -54,12 +54,18 @@ public class VoteButton : MonoBehaviour
 
     private void Confirmed()
     {
-        this.OnConfirmVote.Invoke(this.Player);
+        this.OnConfirmVote.Invoke(this.SelectedItemName);
     }
 }
 
 [Serializable]
 public class PlayerInfoEvent : UnityEvent<PlayerInfo>
+{
+
+}
+
+[Serializable]
+public class UnityEventString : UnityEvent<string>
 {
 
 }

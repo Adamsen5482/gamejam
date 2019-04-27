@@ -9,7 +9,7 @@ public class VotingTurn : PlayerTurn
 
     public List<VoteButton> Buttons;
 
-    private PlayerInfo votedForPlayer;
+    private string votedForPlayer;
 
     private Dictionary<PlayerInfo, int> votes;
 
@@ -43,7 +43,7 @@ public class VotingTurn : PlayerTurn
         int i = 0;
         for (; i < others.Count; i++)
         {
-            this.Buttons[i].SetPlayer(others[i]);
+            this.Buttons[i].SetItem(others[i].Name);
         }
 
         if (player.Role == PlayerRole.Ghost)
@@ -63,7 +63,7 @@ public class VotingTurn : PlayerTurn
         }
 
         // Add vote.
-        this.votes[this.votedForPlayer]++;
+        this.votes[PlayerList.AllPlayers.First(x => x.Name == this.votedForPlayer)]++;
     }
 
     public PlayerInfo GetHightestVoted()

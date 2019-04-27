@@ -25,7 +25,10 @@ public class TurnManager : MonoBehaviour
     public PlayerTurn DiscussionTurn;
 
     [Required]
-    public PlayerTurn VotingTurn;
+    public VotingTurn VotingTurn;
+
+    [Required]
+    public MurderWeaponVotingTurn MurderWeaponVotingTurn;
 
     private Queue<PlayerInfo> turnQueue = new Queue<PlayerInfo>();
 
@@ -96,6 +99,12 @@ public class TurnManager : MonoBehaviour
             yield return this.StartCoroutine(this.VotingTurn.RunTurn(nextPlayer));
             this.VotingTurn.gameObject.SetActive(false);
         }
+
+        // Ghost voting for murder weapon!
+        Debug.Log(">Ghost vote for murder weapon.");
+        this.MurderWeaponVotingTurn.gameObject.SetActive(true);
+        yield return this.StartCoroutine(this.MurderWeaponVotingTurn.RunTurn(PlayerList.Ghost));
+        this.MurderWeaponVotingTurn.gameObject.SetActive(false);
 
         Debug.Log(">End of game.");
     }
