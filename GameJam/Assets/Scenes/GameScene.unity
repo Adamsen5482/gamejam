@@ -697,41 +697,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1784920769556710411, guid: 75611a1f8662c3c45b75bae818646608,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1784920769556710411, guid: 75611a1f8662c3c45b75bae818646608,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1784920769556710411, guid: 75611a1f8662c3c45b75bae818646608,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -70.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023770437019310668, guid: 75611a1f8662c3c45b75bae818646608,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 41.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023770437019310668, guid: 75611a1f8662c3c45b75bae818646608,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 310.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 1299465352616943533, guid: 75611a1f8662c3c45b75bae818646608,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1299465352616943533, guid: 75611a1f8662c3c45b75bae818646608,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75611a1f8662c3c45b75bae818646608, type: 3}
 --- !u!1001 &1756414721190640741
@@ -1013,6 +978,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1288920014}
     m_Modifications:
+    - target: {fileID: 1218161221344625278, guid: ae7a5b1e0ebed3b448c9f232be69ec53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3847631492794765201, guid: ae7a5b1e0ebed3b448c9f232be69ec53,
         type: 3}
       propertyPath: m_Name
@@ -1127,11 +1097,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218161221344625278, guid: ae7a5b1e0ebed3b448c9f232be69ec53,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1218161221344625277, guid: ae7a5b1e0ebed3b448c9f232be69ec53,
         type: 3}

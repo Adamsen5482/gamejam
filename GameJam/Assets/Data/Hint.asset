@@ -158,14 +158,14 @@ MonoBehaviour:
   - Location: 10
     hints:
     - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
-      air and cool wind, you find <MUR>, <RPnoCrrNoMur1> and <RPnoCrrNoMur2> doing
-      the same. It then comes to light that one of them may have murdered <GHOST>.
+      air and cool wind, you find <MUR>, <RPNoCrrNoMurNoGos1> and <RPNoCrrNoMurNoGos2>
+      doing the same. It then comes to light that one of them may have murdered <GHOST>.
     - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
-      air and cool wind, you find <RPnoCrrNoMur1>, <MUR> and <RPnoCrrNoMur2> doing
-      the same. It then comes to light that one of them may have murdered <GHOST>.
+      air and cool wind, you find <RPNoCrrNoMurNoGos1>, <MUR> and <RPNoCrrNoMurNoGos2>
+      doing the same. It then comes to light that one of them may have murdered <GHOST>.
     - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
-      air and cool wind, you find <RPnoCrrNoMur2>, <RPnoCrrNoMur1> and <MUR> doing
-      the same. It then comes to light that one of them may have murdered <GHOST>.
+      air and cool wind, you find <RPNoCrrNoMurNoGos2>, <RPNoCrrNoMurNoGos1> and <MUR>
+      doing the same. It then comes to light that one of them may have murdered <GHOST>.
     - Away from the neverending noise and flashy screens, you lay on the soft grass
       and try to calmly assess the situation. You stare deeper into the gardens, and
       you spot <MUR> and <RPNoCrrNoMurNoGos1> rushing back inside. Odd, but not solid

@@ -47,7 +47,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
 
     private string FillFlavorText(PlayerInfo player)
     {
-        string ghostPlayerText = $"THE GHOST IS {PlayerList.Ghost.Name.FormatName()}.";
+        string ghostPlayerText = $"THE VICTIM IS {PlayerList.Ghost.Name.FormatName()}";
 
         switch (player.Role)
         {
@@ -57,7 +57,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     int count = PlayerList.Accomplices.Count;
                     if (count == 0)
                     {
-                        accomplicesText = "YOU HAVE NO FRIENDS.";
+                        accomplicesText = "YOU HAVE NO ACCOMPLICES.";
                     }
                     else if (count == 1)
                     {
@@ -68,11 +68,11 @@ public class ShowPlayerRoleTurn : PlayerTurn
                         accomplicesText = $"YOUR ACCOMPLICES ARE {string.Join(", ", PlayerList.Accomplices.Take(count - 1).Select(x => x.Name.FormatName()))} and {PlayerList.Accomplices[count - 1].Name.FormatName()}.";
                     }
 
-                    return $"YOU ARE THE MURDERER!\n{accomplicesText}\n{ghostPlayerText}";
+                    return $" {accomplicesText}\n{ghostPlayerText} AND YOU KILLED THEM WITH " + weapons.GetWeaponItem(PlayerList.MurderWeapon).Name.FormatName();
                 }
 
             case PlayerRole.Ghost:
-                return "YOU ARE THE GHOST!";
+                return $"EXACT REVENGE\nFIND OUT WHO MURDERED YOU\nAND HOW";
 
             case PlayerRole.Accomplice:
                 {
@@ -92,7 +92,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
                         accomplicesText = $"YOUR FRIENDS ARE {string.Join(", ", other.Take(count - 1).Select(x => x.Name.FormatName()))} AND {other[count - 1].Name.FormatName()}.";
                     }
 
-                    return $"YOU ARE AN ACCOMPLICE!\nTHE MURDERER IS {PlayerList.Murderer.Name.FormatName()}.\n{accomplicesText}\n{ghostPlayerText}";
+                    return $"YOU KNOW ABOUT THIS. SAVE YOURSELVES.\nTHE MURDERER IS {PlayerList.Murderer.Name.FormatName()}.\n{accomplicesText}\n{ghostPlayerText}";
                 }
 
             case PlayerRole.Detective:
@@ -100,18 +100,18 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     string accomplicesText;
                     if (PlayerList.Accomplices.Count == 0)
                     {
-                        accomplicesText = "";
+                        accomplicesText = " IS";
                     }
                     else if (PlayerList.Accomplices.Count == 1)
                     {
-                        accomplicesText = $" AND THEIR 1 ACCOMPLICE";
+                        accomplicesText = $" AND THEIR 1 ACCOMPLICE ARE";
                     }
                     else
                     {
-                        accomplicesText = $" AND THEIR {PlayerList.Accomplices.Count} ACCOMPLICES";
+                        accomplicesText = $" AND THEIR {PlayerList.Accomplices.Count} ACCOMPLICES ARE";
                     }
 
-                    return $"YOU ARE THE DETECTIVE!\nFIND OUT WHO THE MURDERER{accomplicesText} IS!\n{ghostPlayerText}";
+                    return $"YOU ARE HERE FOR JUSTICE\nFIND OUT WHO THE MURDERER{accomplicesText}\n{ghostPlayerText}";
                 }
 
             case PlayerRole.Error:
