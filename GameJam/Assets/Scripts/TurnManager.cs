@@ -4,10 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour
 {
     public static TurnManager Instance = null;
+
+    [Required]
+    public GameObject GameoverPanel;
 
     [Required]
     public HideGamePanel HidePanel;
@@ -98,6 +102,7 @@ public class TurnManager : MonoBehaviour
         }
 
         Debug.Log(">End of game.");
+        GameoverPanel.gameObject.SetActive(true);
     }
 
     public PlayerInfo NextPlayer()
