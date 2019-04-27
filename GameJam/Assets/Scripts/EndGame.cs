@@ -35,5 +35,6 @@ GOODNIGHT.";
     public void OnDisconnectClicked()
     { 
         SceneManager.LoadScene(0);
+        Audiomanager.instance.PlayMenutrack();
     }
 }
