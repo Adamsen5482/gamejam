@@ -49,7 +49,7 @@ public class VotingTurn : PlayerTurn
         if (player.Role == PlayerRole.Ghost)
         {
             this.GhostText.gameObject.SetActive(true);
-            this.GhostText.text = $"AS THE GHOST YOU GET THE FINAL SAY. YOUR FRIENDS THINKS IT'S {this.GetHightestVoted().Name.FormatName()}";
+            this.GhostText.text = $"AS THE GHOST YOU GET THE FINAL SAY. YOUR FRIENDS THINKS IT'S {this.GetHightestVoted().Name.FormatName()}.";
         }
         else
         {
