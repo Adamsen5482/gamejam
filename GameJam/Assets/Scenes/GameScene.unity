@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 989087468702152859, guid: 53d5398bbb97c6c4982293d473821a3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 989087468702152858, guid: 53d5398bbb97c6c4982293d473821a3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1245,6 +1250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vote
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765180184294301276, guid: 148486a4ecc7cb945a449e9d84995c86,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4765180184294301279, guid: 148486a4ecc7cb945a449e9d84995c86,
         type: 3}

@@ -44,10 +44,12 @@ public static class PlayerList
                 "Sony",
                 "Xbox",
                 "Switch",
-                //"Hello",
-                //"World",
-                //"Damm",
+                "Hello",
+                "World",
+                "Damm",
             }
+            .Shuffle()
+            .Take(UnityEngine.Random.Range(5, 9))
             .Select(x => new PlayerInfo() { Name = x.ToUpper() })
             .ToList() );
     }
