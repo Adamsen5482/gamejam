@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[ExecuteInEditMode]
 public class RotateSelf : MonoBehaviour
 {
     public Vector3 Axis;
