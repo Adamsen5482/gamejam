@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce25b8e3fb4a634daff334b468dd047, type: 3}
+  m_Name: PublicHints
+  m_EditorClassIdentifier: 
+  weaponList: {fileID: 11400000, guid: 14d5784d10890044dbf1a8a804891186, type: 2}
+  hints:
+  - Marks on the ground indicate the murder weapon cannot be <WEP_NOTMURDER>.
+  - "Considering the impact wounds on <GHOST>\u2019s body, we can safely rule out
+    <WEP_NOTMURDER> as the murder weapon."
+  - Blood patterns on the ground and walls indicate that <WEP_NOTMURDER> cannot be
+    the murder weapon.
+  - "<GHOST>\u2019s last text exchange with The Council indicated they fell into paranoia\u2026
+    The only people they didn\u2019t think was conspiring against them is <NOTMURDERER>."
+  - The murderer is <MURDER>! Atleast I think so.
+  - The murderer is <NOTMURDERER>! Atleast I think so.

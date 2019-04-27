@@ -32,6 +32,6 @@ public class WeaponItem
 {
     public Weapons Type;
     public string Name;
-    [PreviewField, PropertyOrder(-1)]
+    [PreviewField(50), TableColumnWidth(58, resizable: false), PropertyOrder(-1)]
     public Sprite Icon;
 }

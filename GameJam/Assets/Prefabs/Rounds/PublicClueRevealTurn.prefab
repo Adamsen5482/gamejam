@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HintText: {fileID: 3057082667110777116}
   EndTurnButton: {fileID: 7789601424591180564}
+  Hints: {fileID: 11400000, guid: 0a0f7e3e2029d9347ba42ebbafd56f35, type: 2}
 --- !u!1 &4638174831062063548
 GameObject:
   m_ObjectHideFlags: 0
