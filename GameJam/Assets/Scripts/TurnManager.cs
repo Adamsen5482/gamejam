@@ -78,7 +78,7 @@ public class TurnManager : MonoBehaviour
             yield return this.StartCoroutine(this.InvestigateLocationTurn.RunTurn(nextPlayer));
             this.InvestigateLocationTurn.gameObject.SetActive(false);
 
-            yield return this.HidePanel.ShowHidePanel("EVERYONE");
+            //yield return this.HidePanel.ShowHidePanel("EVERYONE");
             this.DiscussionTurn.gameObject.SetActive(true);
             yield return this.StartCoroutine(this.DiscussionTurn.RunTurn(null));
             this.DiscussionTurn.gameObject.SetActive(false);

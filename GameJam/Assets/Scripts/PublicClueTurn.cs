@@ -10,6 +10,8 @@ public class PublicClueTurn : PlayerTurn
     [Required]
     public SmartButton EndTurnButton;
 
+    public PublicHints Hints;
+
     private bool waitForEndOfTurn;
 
     private void Start()
@@ -19,7 +21,7 @@ public class PublicClueTurn : PlayerTurn
 
     public override IEnumerator RunTurn(PlayerInfo player)
     {
-        this.HintText.text = "Insert text here";
+        this.HintText.text = this.Hints.GetHint();
 
         this.waitForEndOfTurn = true;
         while (this.waitForEndOfTurn)
