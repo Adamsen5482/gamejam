@@ -25,9 +25,6 @@ MonoBehaviour:
     - You make some small talks with whoever you find to get information. You try
       to understand what a German developer is banging on about, when you spot <RPNoCrrNoGos>
       walking around anxiously...
-    - "(if VGA cable not the WEP) You ask the staff if they have any spare VGA cables.
-      They laugh in your face and ask you if it\u2019s still 2006 and nobody told
-      them. No one else has these cables. A VGA cable could not be the murder weapon."
   - Location: 2
     hints:
     - "You rush to the cafeteria to interrogate the crew. Fearing you might not get
@@ -37,10 +34,6 @@ MonoBehaviour:
     - "It\u2019s just in time for people to take a break, you think. As if on cue,
       <RPNoCrrNoMur> comes in with a congoer. They stay here, order some coffee, and
       keep talking until the time of the murder. Yup, they\u2019re not killers."
-    - "(if poisoned coffee not the WEP) In desperation, and as a brute-force way of
-      checking your suspicions, you drink coffee straight from the pot. It\u2019s
-      actually pretty bad, but not poisoned. Indeed, Poisoned Coffee can be ruled
-      it out as the murder weapon."
   - Location: 3
     hints:
     - Upon visiting the server room, you immediately notice some things that obviously
@@ -50,10 +43,6 @@ MonoBehaviour:
     - "A staff member escorts you inside. Both of you attempt to look for clues. It\u2019s
       cold. It\u2019s loud. You want out of there, now. But then you finally manage
       to get somewhere: <MURDERWEAPON>, <WEP> and <WEP>  are mysteriously missing\u2026"
-    - "(if Keyboard is not the WEP) You quickly scout the place in search of conspicuously
-      missing items. What you do find is a neat pile of keyboards, which a staff member
-      assures you wasn\u2019t touched by any congoer. A keyboard as the murder weapon?
-      Not likely."
   - Location: 4
     hints:
     - "First you hear singing, next the snack wagon comes rolling by. It is operated
