@@ -15,7 +15,7 @@ public class MurderWeaponVotingTurn : PlayerTurn
 
     [NonSerialized]
     public WeaponItem VotedWeapon;
-
+    
     private void Start()
     {
         for (int i = 0; i < this.WeaponList.Weapons.Count; i++)
