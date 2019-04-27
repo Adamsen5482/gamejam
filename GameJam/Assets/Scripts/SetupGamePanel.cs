@@ -1,7 +1,9 @@
 ﻿using Sirenix.OdinInspector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -33,6 +35,11 @@ public class SetupGamePanel : MonoBehaviour
         this.ClearButton.onClick.AddListener(this.OnClearClicked);
 
         this.OnClearClicked();
+    }
+
+    private void NewOnSumbit(BaseEventData obj)
+    {
+        throw new NotImplementedException();
     }
 
     private void OnClearClicked()
@@ -86,6 +93,14 @@ public class SetupGamePanel : MonoBehaviour
         if (this.addedPlayers.Count >= this.RequiredPlayerCount.x)
         {
             this.StartGameButton.interactable = true;
+        }
+    }
+
+    private void OnSubmit(string text)
+    {
+        if (this.AddPlayerButton.interactable == false)
+        {
+            this.OnAddPlayerClicked();
         }
     }
 }
