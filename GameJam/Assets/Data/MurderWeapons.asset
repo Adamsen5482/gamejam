@@ -15,16 +15,16 @@ MonoBehaviour:
   Weapons:
   - Type: 1
     Name: Keyboard
-    Icon: {fileID: 0}
+    Icon: {fileID: 3295490631490670394, guid: a409b91871170774f8d139fc226741c2, type: 3}
   - Type: 2
     Name: Nerf Gun
-    Icon: {fileID: 0}
+    Icon: {fileID: 7690246244955379233, guid: a409b91871170774f8d139fc226741c2, type: 3}
   - Type: 3
     Name: Poisoned Coffee
-    Icon: {fileID: 0}
+    Icon: {fileID: -7135232468589514479, guid: a409b91871170774f8d139fc226741c2, type: 3}
   - Type: 4
     Name: Broken Beer Bottle
-    Icon: {fileID: 0}
+    Icon: {fileID: -2318916330108577540, guid: a409b91871170774f8d139fc226741c2, type: 3}
   - Type: 5
     Name: VGA Cord
-    Icon: {fileID: 0}
+    Icon: {fileID: 798837920525528590, guid: a409b91871170774f8d139fc226741c2, type: 3}

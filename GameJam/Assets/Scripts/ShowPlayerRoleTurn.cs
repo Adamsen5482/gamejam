@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 public class ShowPlayerRoleTurn : PlayerTurn
 {
+    public MurderWeaponsList weapons;
     [Required] public RoleIcons Icons;
-
+    [Required] public Image MurderWeaponIcon;
     [Required] public Image RoleIconImage;
     [Required] public Text PlayerRoleText;
     [Required] public Text FlavorText;
@@ -23,6 +24,15 @@ public class ShowPlayerRoleTurn : PlayerTurn
 
     public override IEnumerator RunTurn(PlayerInfo player)
     {
+        if (player.Role == PlayerRole.Murderer)
+        {
+            MurderWeaponIcon.gameObject.SetActive(true);
+            MurderWeaponIcon.sprite = weapons.GetWeaponItem(PlayerList.MurderWeapon).Icon;
+        }else
+        {
+            MurderWeaponIcon.gameObject.SetActive(false);
+        }
+
         this.waitForEndOfTurn = true;
 
         this.PlayerRoleText.text = player.Role.ToString().ToUpper();
