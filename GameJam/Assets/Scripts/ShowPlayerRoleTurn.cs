@@ -12,13 +12,13 @@ public class ShowPlayerRoleTurn : PlayerTurn
     [Required] public Image RoleIconImage;
     [Required] public Text PlayerRoleText;
     [Required] public Text FlavorText;
-    [Required] public Button EndTurnButton;
+    [Required] public SmartButton EndTurnButton;
 
     private bool waitForEndOfTurn;
 
     private void Start()
     {
-        this.EndTurnButton.onClick.AddListener(() => this.waitForEndOfTurn = false);
+        this.EndTurnButton.ClickAction.AddListener(() => this.waitForEndOfTurn = false);
     }
 
     public override IEnumerator RunTurn(PlayerInfo player)
@@ -37,7 +37,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
 
     private string FillFlavorText(PlayerInfo player)
     {
-        string ghostPlayerText = $"The ghost is {PlayerList.Ghost.Name}.";
+        string ghostPlayerText = $"THE GHOST IS {PlayerList.Ghost.Name.FormatPlayerName()}.";
 
         switch (player.Role)
         {

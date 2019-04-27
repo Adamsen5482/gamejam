@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 854190296420784821}
   - component: {fileID: 854190296420784810}
   - component: {fileID: 854190296420784811}
+  - component: {fileID: 4041769198656008722}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -121,6 +122,24 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4041769198656008722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854190296420784809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604f83ae7ee96f84eb6c2bf8868fc39a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickAction:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  RequireDoubleClick: 1
 --- !u!1 &854190296468760406
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +235,7 @@ MonoBehaviour:
   RoleIconImage: {fileID: 8034234044662645235}
   PlayerRoleText: {fileID: 4673149297752648990}
   FlavorText: {fileID: 854190297086554833}
-  EndTurnButton: {fileID: 854190296420784811}
+  EndTurnButton: {fileID: 4041769198656008722}
 --- !u!1 &854190297086554839
 GameObject:
   m_ObjectHideFlags: 0
