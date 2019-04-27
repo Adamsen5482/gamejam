@@ -33,6 +33,7 @@ public class SetupGamePanel : MonoBehaviour
         this.StartGameButton.onClick.AddListener(this.OnStartClicked);
         this.AddPlayerButton.onClick.AddListener(this.OnAddPlayerClicked);
         this.ClearButton.onClick.AddListener(this.OnClearClicked);
+        this.PlayerNameField.onEndEdit.AddListener(this.OnSubmit);
 
         this.OnClearClicked();
     }
@@ -98,7 +99,7 @@ public class SetupGamePanel : MonoBehaviour
 
     private void OnSubmit(string text)
     {
-        if (this.AddPlayerButton.interactable == false)
+        if (this.AddPlayerButton.interactable)
         {
             this.OnAddPlayerClicked();
         }
