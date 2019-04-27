@@ -37,7 +37,7 @@ public static class PlayerList
     [UnityEditor.InitializeOnLoadMethod]
     private static void AddRandomPlayersInEditor()
     {
-        if (Application.isPlaying)
+        if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
         {
             GameSetup.AssignRoles(new string[]
                 {

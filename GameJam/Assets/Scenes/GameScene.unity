@@ -1454,6 +1454,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4765180183967472882, guid: 148486a4ecc7cb945a449e9d84995c86,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.399994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148486a4ecc7cb945a449e9d84995c86, type: 3}
 --- !u!114 &4765180184260568482 stripped
@@ -1479,6 +1484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MurderWeaponVote
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102616209072242681, guid: 0f8a464cae8e46d4b80691a13ac7eef2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1102616209072242682, guid: 0f8a464cae8e46d4b80691a13ac7eef2,
         type: 3}
@@ -1620,7 +1630,7 @@ PrefabInstance:
     - target: {fileID: 7037784590121292022, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7037784590121292021, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}

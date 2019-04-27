@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -52.7}
-  m_SizeDelta: {x: -40, y: 120}
+  m_AnchoredPosition: {x: 0, y: -39.3}
+  m_SizeDelta: {x: -40, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1218161220564811990
 CanvasRenderer:
@@ -67,22 +67,24 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 088d08dc425f89f468d708502b5f7ebc, type: 3}
-    m_FontSize: 24
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'VOTE
+  m_Text: 'THE TRUTH IS FOR YOUR EYES ONLY
 
-    (Not yet implemented)
+    YOU MAY TELL THEM LIES
 
-    :C'
+    YOU MAY TELL THEM TRUTH
+
+    THE CHOICE IS YOURS'
 --- !u!1 &1218161221269074154
 GameObject:
   m_ObjectHideFlags: 0
