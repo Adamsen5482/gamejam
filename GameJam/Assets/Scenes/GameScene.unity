@@ -808,6 +808,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShowPlayerRolePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 854190296468760406, guid: 75611a1f8662c3c45b75bae818646608,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 854190296468760401, guid: 75611a1f8662c3c45b75bae818646608,
         type: 3}
       propertyPath: m_LocalPosition.x
