@@ -61,7 +61,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     }
                     else if (count == 1)
                     {
-                        accomplicesText = $"YOUR FRIEND IS {PlayerList.Accomplices[0].Name.FormatName()}.";
+                        accomplicesText = $"YOUR BUDDY IS {PlayerList.Accomplices[0].Name.FormatName()}.";
                     }
                     else
                     {
