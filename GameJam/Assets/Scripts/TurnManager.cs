@@ -111,6 +111,7 @@ public class TurnManager : MonoBehaviour
         this.MurderWeaponVotingTurn.gameObject.SetActive(false);
 
         Debug.Log(">End of game.");
+        Audiomanager.instance.playFinalVote();
         yield return this.StartCoroutine(this.HidePanel.ShowHidePanel("EVERYONE", "THE TRUTH IS ABOUT TO BE REVEALED..."));
         this.GameoverPanel.gameObject.SetActive(true);
         this.GameoverPanel.BuildEndGame(this.VotingTurn.GhostVotedPlayer, this.MurderWeaponVotingTurn.VotedWeapon);
