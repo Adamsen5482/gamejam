@@ -1,5 +1,5 @@
 ﻿using Sirenix.OdinInspector;
-using Sirenix.Utilities;
+//using Sirenix.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,7 +92,7 @@ public class TurnManager : MonoBehaviour
         this.turnQueue = PlayerList.AllPlayers
             .Where(x => x.Role != PlayerRole.Ghost)
             .Shuffle()
-            .AppendWith(PlayerList.Ghost)
+            .Append(PlayerList.Ghost)
             .ToQueue();
         while (this.turnQueue.Count > 0)
         {
@@ -111,6 +111,7 @@ public class TurnManager : MonoBehaviour
         this.MurderWeaponVotingTurn.gameObject.SetActive(false);
 
         Debug.Log(">End of game.");
+        yield return this.StartCoroutine(this.HidePanel.ShowHidePanel("EVERYONE", "THE TRUTH IS ABOUT TO BE REVEALED..."));
         this.GameoverPanel.gameObject.SetActive(true);
         this.GameoverPanel.BuildEndGame(this.VotingTurn.GhostVotedPlayer, this.MurderWeaponVotingTurn.VotedWeapon);
     }
