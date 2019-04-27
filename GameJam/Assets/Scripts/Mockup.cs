@@ -42,9 +42,9 @@ public static class PlayerList
                 "Sony",
                 "Xbox",
                 "Switch",
-                "Hello",
-                "World",
-                "Damm",
+                //"Hello",
+                //"World",
+                //"Damm",
             }
             .Select(x => new PlayerInfo() { Name = x })
             .ToList() );
