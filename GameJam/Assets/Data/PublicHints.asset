@@ -28,11 +28,11 @@ MonoBehaviour:
   - "<GHOST>\x19s last text exchange with The Council indicated they fell into some
     sort of paranoia. The only person they didn\x19t think was conspiring against
     them is <NOTMURDERER1>."
-  - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <MURDER>,
+  - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <MURDERER>,
     <NOTMURDERER1>, <NOTMURDERER2>, and <NOTMURDERER3>'
   - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <NOTMURDERER1>,
-    <MURDER>, <NOTMURDERER2>, and <NOTMURDERER3>'
+    <MURDERER>, <NOTMURDERER2>, and <NOTMURDERER3>'
   - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <NOTMURDERER1>,
-    <NOTMURDERER2>, <MURDER>, and <NOTMURDERER3>'
+    <NOTMURDERER2>, <MURDERER>, and <NOTMURDERER3>'
   - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <NOTMURDERER1>,
     <NOTMURDERER2>, <NOTMURDERER3>, and <MURDERER>'

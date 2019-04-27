@@ -9,16 +9,18 @@ public class VotingTurn : PlayerTurn
 
     public List<VoteButton> Buttons;
 
-    private string votedForPlayer;
+    private string votedForName;
 
     private Dictionary<PlayerInfo, int> votes;
+
+    public PlayerInfo GhostVotedPlayer;
 
     private void Start()
     {
         for (int i = 0; i < this.Buttons.Count; i++)
         {
             this.Buttons[i].OnSelect.AddListener(this.OnSelection);
-            this.Buttons[i].OnConfirmVote.AddListener(x => this.votedForPlayer = x);
+            this.Buttons[i].OnConfirmVote.AddListener(x => this.votedForName = x);
         }
 
         // Players cannot vote for themselves or the ghost, so only enable voting buttons for number of players minus 2.
@@ -48,22 +50,27 @@ public class VotingTurn : PlayerTurn
 
         if (player.Role == PlayerRole.Ghost)
         {
-            this.GhostText.gameObject.SetActive(true);
             this.GhostText.text = $"AS THE GHOST YOU GET THE FINAL SAY. YOUR FRIENDS THINKS IT'S {this.GetHightestVoted().Name.FormatName()}.";
         }
         else
         {
-            this.GhostText.gameObject.SetActive(false);
+            this.GhostText.text = "AT THE END OF IT ALL WHO DO YOU THINK DID IT?";
         }
 
-        this.votedForPlayer = null;
-        while (this.votedForPlayer == null)
+        this.votedForName = null;
+        while (this.votedForName == null)
         {
             yield return null;
         }
 
         // Add vote.
-        this.votes[PlayerList.AllPlayers.First(x => x.Name == this.votedForPlayer)]++;
+        var votedForPlayer = PlayerList.AllPlayers.First(x => x.Name == this.votedForName);
+        this.votes[votedForPlayer]++;
+
+        if (player.Role == PlayerRole.Ghost)
+        {
+            this.GhostVotedPlayer = votedForPlayer;
+        }
     }
 
     public PlayerInfo GetHightestVoted()

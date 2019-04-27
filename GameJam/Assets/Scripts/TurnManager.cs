@@ -11,9 +11,6 @@ public class TurnManager : MonoBehaviour
     public static TurnManager Instance = null;
 
     [Required]
-    public GameObject GameoverPanel;
-
-    [Required]
     public HideGamePanel HidePanel;
 
     [Required]
@@ -33,6 +30,9 @@ public class TurnManager : MonoBehaviour
 
     [Required]
     public MurderWeaponVotingTurn MurderWeaponVotingTurn;
+
+    [Required]
+    public EndGame GameoverPanel;
 
     private Queue<PlayerInfo> turnQueue = new Queue<PlayerInfo>();
 
@@ -54,7 +54,7 @@ public class TurnManager : MonoBehaviour
             var nextPlayer = this.NextPlayer();
 
             // Show hide panel
-            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name));
+            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name, "FOR YOUR EYES ONLY\nYOU'RE ABOUT TO RECEIVE\nYOUR ROLE IN THIS THRILLER\nIT IS A SECRET FOR YOU ALONE"));
 
             this.ShowPlayerRoleTurn.gameObject.SetActive(true);
             yield return this.StartCoroutine(this.ShowPlayerRoleTurn.RunTurn(nextPlayer));
@@ -75,7 +75,7 @@ public class TurnManager : MonoBehaviour
         while (this.turnQueue.Count > 0)
         {
             var nextPlayer = this.NextPlayer();
-            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name));
+            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name, "THE TRUTH IS FOR YOUR EYES ONLY\nYOU MAY TELL THEM LIES\nYOU MAY TELL THEM TRUTH\nTHE CHOICE IS YOURS"));
 
             this.InvestigateLocationTurn.gameObject.SetActive(true);
             yield return this.StartCoroutine(this.InvestigateLocationTurn.RunTurn(nextPlayer));
@@ -97,7 +97,7 @@ public class TurnManager : MonoBehaviour
         while (this.turnQueue.Count > 0)
         {
             var nextPlayer = this.NextPlayer();
-            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name));
+            yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name, "YOU ARE ABOUT TO VOTE\nON WHO YOU THINK DID IT\nTHE GHOST MUST TAKE IT\nINTO CONSIDERATION\nPICK CAREFULLY"));
 
             this.VotingTurn.gameObject.SetActive(true);
             yield return this.StartCoroutine(this.VotingTurn.RunTurn(nextPlayer));
@@ -111,7 +111,8 @@ public class TurnManager : MonoBehaviour
         this.MurderWeaponVotingTurn.gameObject.SetActive(false);
 
         Debug.Log(">End of game.");
-        GameoverPanel.gameObject.SetActive(true);
+        this.GameoverPanel.gameObject.SetActive(true);
+        this.GameoverPanel.BuildEndGame(this.VotingTurn.GhostVotedPlayer, this.MurderWeaponVotingTurn.VotedWeapon);
     }
 
     public PlayerInfo NextPlayer()
