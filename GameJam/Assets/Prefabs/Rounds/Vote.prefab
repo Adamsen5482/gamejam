@@ -571,6 +571,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9167859490087003015, guid: b690b7a9fb83bed4cb6a0fc31001daf1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b690b7a9fb83bed4cb6a0fc31001daf1, type: 3}
 --- !u!224 &6499876258994469542 stripped
@@ -707,6 +712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167859490087003015, guid: b690b7a9fb83bed4cb6a0fc31001daf1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b690b7a9fb83bed4cb6a0fc31001daf1, type: 3}
@@ -845,6 +855,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9167859490087003015, guid: b690b7a9fb83bed4cb6a0fc31001daf1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b690b7a9fb83bed4cb6a0fc31001daf1, type: 3}
 --- !u!224 &5025341369773516364 stripped
@@ -981,6 +996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167859490087003015, guid: b690b7a9fb83bed4cb6a0fc31001daf1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b690b7a9fb83bed4cb6a0fc31001daf1, type: 3}
@@ -1119,6 +1139,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9167859490087003015, guid: b690b7a9fb83bed4cb6a0fc31001daf1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b690b7a9fb83bed4cb6a0fc31001daf1, type: 3}
 --- !u!114 &5006485471228072987 stripped
@@ -1256,6 +1281,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9167859490087003015, guid: b690b7a9fb83bed4cb6a0fc31001daf1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b690b7a9fb83bed4cb6a0fc31001daf1, type: 3}
 --- !u!224 &1786774953088736591 stripped
@@ -1392,6 +1422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167859490087003015, guid: b690b7a9fb83bed4cb6a0fc31001daf1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b690b7a9fb83bed4cb6a0fc31001daf1, type: 3}

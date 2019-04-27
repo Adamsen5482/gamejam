@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ShowPlayerRoleTurn : PlayerTurn
 {
-    public MurderWeaponsList weapons;
+    [Required] public MurderWeaponsList weapons;
     [Required] public RoleIcons Icons;
     [Required] public Image MurderWeaponIcon;
     [Required] public Image RoleIconImage;
