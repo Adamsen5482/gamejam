@@ -1,21 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Sirenix.OdinInspector;
 
-public class Hint : MonoBehaviour
+[CreateAssetMenu]
+public class Hint : ScriptableObject
 {
-    public string mylocation;
-    public int mynumber;
+    [SerializeField, TableList]
+    private List<HintItem> hintitems;
 
-    public Hint(string location, int number)
+    private Dictionary<string, List<string>> hintmap;
+    public string getHint(string location)
     {
-        mylocation = location;
-        mynumber = number;
+        if (hintmap == null)
+        {
+            hintmap = new Dictionary<string, List<string>>();
+            for (int i = 0; i < hintitems.Count; i++)
+            {
+                hintmap.Add(hintitems[i].Location, hintitems[1].hints);
+            }
+
+        
+
+        }
+        var h= hintmap[location];
+        
+        return h[UnityEngine.Random.Range(0, h.Count)]
+            .Replace("RPNoMurNoCrrNoGos", "dummyname".FormatPlayerName());
+
     }
+}
 
-   public void getlocation(string location)
-    {
+ 
+
+[Serializable]
+public class HintItem 
+{
+    public string Location;
     
+    public List<string> hints;
 
-    }
 }
