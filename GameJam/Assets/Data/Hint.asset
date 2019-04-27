@@ -18,12 +18,12 @@ MonoBehaviour:
     hints:
     - You sit in the lounge, pretending to enjoy a bestselling thriller novel. You
       lose yourself reading the book however, and barely miss someone entering the
-      crime scene. Their hair and shape of their head reminds you of <RPNoCrrNoGos>.
+      crime scene. Their hair and shape of their head reminds you of <RP>.
     - Sitting in the lounge, you enjoy some mediocre appetizers and try to take in
       the atmosphere. You find <MUR> and <RPNoCrrNoMurNoGos1> are having a very vested
       interest in <GHOST>...
     - You make some small talks with whoever you find to get information. You try
-      to understand what a German developer is banging on about, when you spot <RPNoCrrNoGos>
+      to understand what a Unity developer is banging on about, when you spot <RPNoCrrNoGos>
       walking around anxiously...
     - Sitting in the lounge, you enjoy some mediocre appetizers and try to take in
       the atmosphere. You find <RPNoCrrNoMurNoGos1> and <MUR> are having a very vested
@@ -87,18 +87,12 @@ MonoBehaviour:
       with a weirdly roaring passion. It\u2019s creepy, but not incriminating."
   - Location: 6
     hints:
-    - You notice a <WEP>  in the corner of the room, and graciously weep a single
-      manly tear as a congoer accidentally destroys it while walking around in a motion
+    - You notice a <WEP> in the corner of the room, and graciously weep a single manly
+      tear as a congoer accidentally destroys it while walking around in a motion
       capture suit. Please take a moment of silence in honor of its legacy.
     - "You read the sign on the table: \u201CCaught in a virtual world. Email me items\u201D.
       You chuckle to yourself as you send a photo of a <WEP> on the table. After the
       murder, you rush back and see that it hadn't moved an inch."
-    - "You clearly witness <MUR>, <RPNoCrrNoMur> and <RPNoCrrNoMur> in the audience
-      for a game design talk. You find yourself really getting into it, but as you
-      remember why you\u2019re here, you find one of the three is mysteriously gone."
-    - "You clearly witness <RPNoCrrNoMur>, <RPNoCrrNoMur> and <MUR> in the audience
-      for a game design talk. You find yourself really getting into it, but as you
-      remember why you'\x19re here, you find one of the three is mysteriously gone."
   - Location: 7
     hints:
     - "Tentatively, you enter the staff and volunteers room. A puzzled volunteer tries
@@ -106,14 +100,11 @@ MonoBehaviour:
       that throughout the murder, the <WEP> is still here. It\u2019s not the murder
       weapon, you deduce, and run away before the staff throw you out of the venue."
     - You come up to one of the organizers and ask to see the staff room. Inside you
-      very easily spot a <WEP>, <WEP> and a <MURDERWEAPON>. After the murder however,
-      you run back and understand someone took one of these items and killed <GHOST>.
+      very easily spot a <WEP> and a <MURDERWEAPON>. After the murder however, you
+      run back and understand someone took one of these items and killed <GHOST>.
     - You come up to one of the organizers and ask to see the staff room. Inside you
-      very easily spot a <MURDERWEAPON>, <WEP> and a <WEP>. After the murder however,
-      you run back and understand someone took one of these items and killed <GHOST>.
-    - You come up to one of the organizers and ask to see the staff room. Inside you
-      very easily spot a <WEP>, <MURDERWEAPON> and a <WEP>. After the murder however,
-      you run back and understand someone took one of these items and killed <GHOST>.
+      very easily spot a <MURDERWEAPON> and a <WEP>. After the murder however, you
+      run back and understand someone took one of these items and killed <GHOST>.
     - During a keynote, you sneak inside the staff room. Plowing through the maze
       of leftover cola and sandwiches, you find they own a <WEP>. No one came to get
       it, even at the time of the murder.
@@ -158,14 +149,11 @@ MonoBehaviour:
   - Location: 10
     hints:
     - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
-      air and cool wind, you find <MUR>, <RPNoCrrNoMurNoGos1> and <RPNoCrrNoMurNoGos2>
-      doing the same. It then comes to light that one of them may have murdered <GHOST>.
+      air and cool wind, you find <MUR> and <RPNoCrrNoMurNoGos1> doing the same. It
+      then comes to light that one of them may have murdered <GHOST>.
     - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
-      air and cool wind, you find <RPNoCrrNoMurNoGos1>, <MUR> and <RPNoCrrNoMurNoGos2>
-      doing the same. It then comes to light that one of them may have murdered <GHOST>.
-    - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
-      air and cool wind, you find <RPNoCrrNoMurNoGos2>, <RPNoCrrNoMurNoGos1> and <MUR>
-      doing the same. It then comes to light that one of them may have murdered <GHOST>.
+      air and cool wind, you find <RPNoCrrNoMurNoGos1> and <MUR> doing the same. It
+      then comes to light that one of them may have murdered <GHOST>.
     - Away from the neverending noise and flashy screens, you lay on the soft grass
       and try to calmly assess the situation. You stare deeper into the gardens, and
       you spot <MUR> and <RPNoCrrNoMurNoGos1> rushing back inside. Odd, but not solid
