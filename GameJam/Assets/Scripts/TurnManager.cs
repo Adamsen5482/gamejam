@@ -1,5 +1,5 @@
 ﻿using Sirenix.OdinInspector;
-using Sirenix.Utilities;
+//using Sirenix.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,7 +92,7 @@ public class TurnManager : MonoBehaviour
         this.turnQueue = PlayerList.AllPlayers
             .Where(x => x.Role != PlayerRole.Ghost)
             .Shuffle()
-            .AppendWith(PlayerList.Ghost)
+            .Append(PlayerList.Ghost)
             .ToQueue();
         while (this.turnQueue.Count > 0)
         {
