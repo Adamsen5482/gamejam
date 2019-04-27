@@ -18,100 +18,159 @@ MonoBehaviour:
     hints:
     - You sit in the lounge, pretending to enjoy a bestselling thriller novel. You
       lose yourself reading the book however, and barely miss someone entering the
-      crime scene. Their hair and shape of their head reminds you of <RPNoMurNoCrrNoGos>.
+      crime scene. Their hair and shape of their head reminds you of <RPNoCrrNoGos>.
     - Sitting in the lounge, you enjoy some mediocre appetizers and try to take in
-      the atmosphere. You find <RPNoCrrNoGos> is having a very vested interest in
-      <GOS>...
+      the atmosphere. You find <MUR> and <RPNoCrrNoMurNoGos1> are having a very vested
+      interest in <GHOST>...
     - You make some small talks with whoever you find to get information. You try
       to understand what a German developer is banging on about, when you spot <RPNoCrrNoGos>
       walking around anxiously...
+    - Sitting in the lounge, you enjoy some mediocre appetizers and try to take in
+      the atmosphere. You find <RPNoCrrNoMurNoGos1> and <MUR> are having a very vested
+      interest in <GHOST>...
   - Location: 2
     hints:
     - "You rush to the cafeteria to interrogate the crew. Fearing you might not get
-      anything useful, a barista motions towards <RPNoCrrNoMur>, as they\u2019re taking
-      a selfie and calmly drinking coffee. No way they could have done it at this
-      time frame."
+      anything useful, a barista motions towards <RPNoCrrNoMurNoGos1>, as they\u2019re
+      taking a selfie and calmly drinking coffee. Doesn't look like a murder thing."
     - "It\u2019s just in time for people to take a break, you think. As if on cue,
-      <RPNoCrrNoMur> comes in with a congoer. They stay here, order some coffee, and
-      keep talking until the time of the murder. Yup, they\u2019re not killers."
+      <RPNoCrrNoMurNoGos1> and <MUR> come in with a congoer. They stay here, order
+      some coffee, and leave. Both were found next to the crime scene at the same
+      time."
+    - "It\x19s just in time for people to take a break, you think. As if on cue, <MUR>
+      and <RPNoCrrNoMurNoGos1> come in with a congoer. They stay here, order some
+      coffee, and leave. Both were found next to the crime scene at the same time."
   - Location: 3
     hints:
     - Upon visiting the server room, you immediately notice some things that obviously
-      should be in a proper server room are missing. The only items left behind are
-      <WEP> and <WEP>... No time for the killer to take them; these can be dismissed
-      as murder weapons.
-    - "A staff member escorts you inside. Both of you attempt to look for clues. It\u2019s
-      cold. It\u2019s loud. You want out of there, now. But then you finally manage
-      to get somewhere: <MURDERWEAPON>, <WEP> and <WEP>  are mysteriously missing\u2026"
+      should be in a proper server room are missing. The only item left behind is
+      <WEP>... No time for the killer to take it.
+    - "A staff member escorts you inside. Both of you attempt to look for clues. You
+      want out of there, now. Then you finally manage to get somewhere: a <MURDERWEAPON>
+      and a <WEP> are mysteriously missing\u2026 One of them is the murder weapon."
+    - 'A staff member escorts you inside. Both of you attempt to look for clues. You
+      want out of there, now. Then you finally manage to get somewhere: a <WEP> and
+      a <MURDERWEAPON> are mysteriously missing& One of them is the murder weapon.'
   - Location: 4
     hints:
     - "First you hear singing, next the snack wagon comes rolling by. It is operated
-      by Mario himself. Well, someone dressed as him, at least. You smile, as his
-      joy fills you with warmth and determination. You find <RPNoCrrNoMur> enjoying
-      their potato chips. Don\u2019t think they\u2019re gonna murder today."
+      by Super Mario himself. You smile, as his joy fills you with warmth and determination.
+      You find <RPNoCrrNoMurNoGos1> enjoying their potato chips. Don\u2019t think
+      they\u2019re gonna murder today."
     - "You go up to a sponsor's panel, and ask the representative if he saw anything
-      wrong. \u201CCome to think about it,\u201D he utters, \u201C<RPNoCrrNoMur> and
-      <MUR> looked kinda odd.\u201D They went in and out of the murder area, he recalls.
-      Hmm."
+      wrong. \u201CCome to think about it,\u201D he utters, \u201C<RPNoCrrNoMurNoGos1>
+      and <MUR> looked kinda odd.\u201D They went in and out of the murder area, he
+      recalls. Hmm."
+    - "You go up to a sponsor's panel, and ask the representative if he saw anything
+      wrong. \x1CCome to think about it,\x1D he utters, \x1C<MUR> and <RPNoCrrNoMur>
+      looked kinda odd.\x1D They went in and out of the murder area, he recalls. Hmm."
     - You watch a congoer play around in a virtual world, wearing a headset. A small
-      crowd gathers around them, as they try to orient themselves. <RPNoCrrNoMur>  enjoying
-      the show, up until the time of the murder. They appear to be clear.
+      crowd gathers around them, as the congoer tries, and fails, to orient themselves.
+      <RPNoCrrNoMurNoGos1> is enjoying the show, up until the time of the murder.
+      They appear to be clear.
   - Location: 5
     hints:
-    - "You go out the door to get some fresh air. You\u2019ve had enough of this time
-      travel crap, you say to yourself. As you bathe in the summer sun, you find <RPNoCrrNoMur>,<RPNoCrrNoMur>
-      and <MUR> leaving the venue. You try following one of them, but then you are
-      alerted that one of them ran back and commited the murder."
+    - You go out the door to get some fresh air. As you bathe in the summer sun, you
+      find <RPNoCrrNoMurNoGos1>,<RPNoCrrNoMurNoGos2> and <MUR> leaving the venue.
+      You try following one of them, but then you are alerted that one of them ran
+      back and commited the murder.
+    - You go out the door to get some fresh air. As you bathe in the summer sun, you
+      find <RPNoCrrNoMurNoGos1>, <MUR>, and <RPNoCrrNoMurNoGos2> leaving the venue.
+      You try following one of them, but then you are alerted that one of them ran
+      back and commited the murder.
+    - You go out the door to get some fresh air. As you bathe in the summer sun, you
+      find <MUR>, <RPNoCrrNoMurNoGos1>, and <RPNoCrrNoMurNoGos2> leaving the venue.
+      You try following one of them, but then you are alerted that one of them ran
+      back and commited the murder.
     - "There is an impromptu meetup outside, where anyone can step up and talk about
-      whatever they want. <RP> comes up and talks about violent video games with a
-      weirdly roaring passion. It\u2019s creepy, but not incriminating."
+      whatever they want. <RPNoCrrNoGos> comes up and talks about violent video games
+      with a weirdly roaring passion. It\u2019s creepy, but not incriminating."
   - Location: 6
     hints:
     - You notice a <WEP>  in the corner of the room, and graciously weep a single
       manly tear as a congoer accidentally destroys it while walking around in a motion
-      capture suit.
-    - "You read the sign on the table: \u201CCaught in the VR world. Email me items\u201D.
-      You chuckle to yourself as you send a photo of <WEP> on the table. It stays
-      there after the murder."
+      capture suit. Please take a moment of silence in honor of its legacy.
+    - "You read the sign on the table: \u201CCaught in a virtual world. Email me items\u201D.
+      You chuckle to yourself as you send a photo of a <WEP> on the table. After the
+      murder, you rush back and see that it hadn't moved an inch."
     - "You clearly witness <MUR>, <RPNoCrrNoMur> and <RPNoCrrNoMur> in the audience
       for a game design talk. You find yourself really getting into it, but as you
       remember why you\u2019re here, you find one of the three is mysteriously gone."
+    - "You clearly witness <RPNoCrrNoMur>, <RPNoCrrNoMur> and <MUR> in the audience
+      for a game design talk. You find yourself really getting into it, but as you
+      remember why you'\x19re here, you find one of the three is mysteriously gone."
   - Location: 7
     hints:
     - "Tentatively, you enter the staff and volunteers room. A puzzled volunteer tries
-      to tell you it\u2019s staff only, but you investigate anyway. It seems that
-      throughout the murder, the <WEP> is still here. It\u2019s not the murder weapon,
-      you deduce, and run away before the staff throw you out of the venue."
+      to tell you it\u2019s a staff only room, but you investigate anyway. It seems
+      that throughout the murder, the <WEP> is still here. It\u2019s not the murder
+      weapon, you deduce, and run away before the staff throw you out of the venue."
     - You come up to one of the organizers and ask to see the staff room. Inside you
       very easily spot a <WEP>, <WEP> and a <MURDERWEAPON>. After the murder however,
-      you run back to find one of these items missing.
+      you run back and understand someone took one of these items and killed <GHOST>.
+    - You come up to one of the organizers and ask to see the staff room. Inside you
+      very easily spot a <MURDERWEAPON>, <WEP> and a <WEP>. After the murder however,
+      you run back and understand someone took one of these items and killed <GHOST>.
+    - You come up to one of the organizers and ask to see the staff room. Inside you
+      very easily spot a <WEP>, <MURDERWEAPON> and a <WEP>. After the murder however,
+      you run back and understand someone took one of these items and killed <GHOST>.
     - During a keynote, you sneak inside the staff room. Plowing through the maze
-      of leftover coke and sandwiches, you find they have a <WEP>. No one came to
-      get it, even at the time of the murder.
+      of leftover cola and sandwiches, you find they own a <WEP>. No one came to get
+      it, even at the time of the murder.
   - Location: 8
     hints:
-    - You had no idea what to expect in the IT department, but you never know. You
+    - You had no idea what to expect from an IT department, but you never know. You
+      interview a confused, slouched IT woman who tells you a few people came in throughout
+      the day and asked for <WEP>, <WEP> and <MURDERWEAPON>.
+    - You had no idea what to expect from an IT department, but you never know. You
+      interview a confused, slouched IT woman who tells you a few people came in throughout
+      the day and asked for <WEP>, <MURDERWEAPON> and <WEP>.
+    - You had no idea what to expect from an IT department, but you never know. You
       interview a confused, slouched IT woman who tells you a few people came in throughout
       the day and asked for <WEP>, <WEP> and <MURDERWEAPON>.
     - "Under the guise of asking a technical question, you peek inside the IT room.
       Inside, you clearly see a well-stored <WEP>, and it couldn\u2019t be reached
       by congoers."
+    - "Under the guise of asking a technical question, you peek inside the IT room.
+      Inside, you clearly see a well-stored <WEP>, and it couldn\x19t be reached by
+      congoers."
   - Location: 9
     hints:
     - "You want to find that murderer with their pants down. You head to the restroom,
-      and very quickly realize <RPNoCrrNoMurNoGos> is having some \u2018bowel issues\u2019
+      and very quickly realize <RPNoCrrNoMurNoGos1> is having some \u2018bowel issues\u2019
       in the nearby stall. These... \u2018issues\u2019 continue into the time of the
       murde"
+    - "You want to find that murderer with their pants down. You head to the restroom,
+      and very quickly realize <RPNoCrrNoMurNoGos1> is having some \x18bowel issues\x19
+      in the nearby stall. These... \x18issues\x19 continue into the time of the murde"
     - "You stand guard at the restroom, making notes of the people going in and out.
-      You recognize <RPNoCrrNoMur>, <RPNoCrrNoMur> and <Mur>. Just as you were about
-      to leave, you catch one of those running towards the crime scene. You don\u2019t
-      catch who exactly."
+      You recognize <RPNoCrrNoMurNoGos1>, <RPNoCrrNoMurNoGos2> and <MUR>. Just as
+      you were about to leave, you catch one of those running towards the crime scene.
+      You don\u2019t recognize anyone in particular."
+    - "You stand guard at the restroom, making notes of the people going in and out.
+      You recognize <RPNoCrrNoMurNoGos1>, <MUR> and <RPNoCrrNoMurNoGos2>. Just as
+      you were about to leave, you catch one of those running towards the crime scene.
+      You don\x19t recognize anyone in particular."
+    - "You stand guard at the restroom, making notes of the people going in and out.
+      You recognize <MUR>, <RPNoCrrNoMurNoGos1> and <RPNoCrrNoMurNoGos2>. Just as
+      you were about to leave, you catch one of those running towards the crime scene.
+      You don\x19t recognize anyone in particular."
   - Location: 10
     hints:
     - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
-      air and cool wind, you find <MUR>, <RPnoCrrNoMur> and <RPnoCrrNoMur>, <RPnoCrrNoMur>
-      doing the same. It then comes to light that one of them may have murdered <GHOST>.
+      air and cool wind, you find <MUR>, <RPnoCrrNoMur1> and <RPnoCrrNoMur2> doing
+      the same. It then comes to light that one of them may have murdered <GHOST>.
+    - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
+      air and cool wind, you find <RPnoCrrNoMur1>, <MUR> and <RPnoCrrNoMur2> doing
+      the same. It then comes to light that one of them may have murdered <GHOST>.
+    - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
+      air and cool wind, you find <RPnoCrrNoMur2>, <RPnoCrrNoMur1> and <MUR> doing
+      the same. It then comes to light that one of them may have murdered <GHOST>.
     - Away from the neverending noise and flashy screens, you lay on the soft grass
       and try to calmly assess the situation. You stare deeper into the gardens, and
-      you spot (RPNoCrr) and (random <RandomAccomplice> rushing back inside. Odd,
-      but not very incriminating.
+      you spot <MUR> and <RPNoCrrNoMurNoGos1> rushing back inside. Odd, but not solid
+      evidence.
+    - Away from the neverending noise and flashy screens, you lay on the soft grass
+      and try to calmly assess the situation. You stare deeper into the gardens, and
+      you spot <RPNoCrrNoMurNoGos1> and <MUR> rushing back inside. Odd, but not solid
+      evidence.

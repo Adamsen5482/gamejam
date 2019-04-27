@@ -43,7 +43,7 @@ public static class PlayerList
                 "Daddy",
                 "Sony",
                 "Xbox",
-                //"Switch",
+                "Switch",
                 //"Hello",
                 //"World",
                 //"Damm",
