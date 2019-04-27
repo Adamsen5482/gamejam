@@ -15,9 +15,10 @@ public class Audiomanager : MonoBehaviour
   
 
     public AudioSource menutrack;
-    public AudioSource alert;
+    public AudioSource buttonClick;
     public AudioSource MurderWinTrack;
     public AudioSource GhostWinTrack;
+    public AudioSource FinalVote;
     public static Audiomanager instance = null;     //Allows other scripts to call functions from SoundManager.             
 
 
@@ -38,7 +39,15 @@ public class Audiomanager : MonoBehaviour
     }
 
 
- 
+    public void playButtonClick()
+    {
+        buttonClick.Play();
+    }
+    public void playFinalVote()
+    {
+        menutrack.Stop();
+        FinalVote.Play();
+    }
     public void PlayGameBegin()
     {
         gamebegin.Play();
@@ -48,10 +57,7 @@ public class Audiomanager : MonoBehaviour
     {
         menutrack.Play();
     }
-    public void PlayAlert()
-    {
-        alert.Play();
-    }
+
     public void PlayMurderWinTrack()
     {
         MurderWinTrack.Play();

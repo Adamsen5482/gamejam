@@ -19,6 +19,8 @@ public class SetupGamePanel : MonoBehaviour
     public InputField PlayerNameField;
     [Required]
     public Text PlayerNamesText;
+
+    public Text numOfPlayers;
     
     [Required, FilePath(Extensions = ".unity")]
     public string GameScenePath;
@@ -75,6 +77,35 @@ public class SetupGamePanel : MonoBehaviour
         else
         {
             this.AddPlayerButton.interactable = true;
+        }
+
+        if(numOfPlayers != null)
+        {
+            string text;
+            print(this.addedPlayers.Count);
+            switch (this.addedPlayers.Count)
+            {
+                case 5:
+                    text = "3 DETECTIVES / 1 MURDERER";
+                    break;
+                case 6:
+                    text = "3 DETECTIVES / 1 ACCOMPLICE\n1 MURDERER";
+                    break;
+                case 7:
+                    text = "4 DETECTIVES / 1 ACCOMPLICE\n1 MURDERER";
+                    break;
+                case 8:
+                    text = "4 DETECTIVES / 2 ACCOMPLICES\n1 MURDERER";
+                    break;
+                case 9:
+                    text = "5 DETECTIVES / 2 ACCOMPLICES\n1 MURDERER";
+                    break;
+                default:
+                    text = "";
+                    break;
+            }
+
+            numOfPlayers.text = text;
         }
     }
 
