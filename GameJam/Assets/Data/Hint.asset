@@ -19,31 +19,110 @@ MonoBehaviour:
     - You sit in the lounge, pretending to enjoy a bestselling thriller novel. You
       lose yourself reading the book however, and barely miss someone entering the
       crime scene. Their hair and shape of their head reminds you of <RPNoMurNoCrrNoGos>.
-    - <i>PlaceHolder</i>
+    - Sitting in the lounge, you enjoy some mediocre appetizers and try to take in
+      the atmosphere. You find <RPNoCrrNoGos> is having a very vested interest in
+      <GOS>...
+    - You make some small talks with whoever you find to get information. You try
+      to understand what a German developer is banging on about, when you spot <RPNoCrrNoGos>
+      walking around anxiously...
+    - "(if VGA cable not the WEP) You ask the staff if they have any spare VGA cables.
+      They laugh in your face and ask you if it\u2019s still 2006 and nobody told
+      them. No one else has these cables. A VGA cable could not be the murder weapon."
   - Location: 2
     hints:
-    - THE MURDERER IS <MURDERER>!
+    - "You rush to the cafeteria to interrogate the crew. Fearing you might not get
+      anything useful, a barista motions towards <RPNoCrrNoMur>, as they\u2019re taking
+      a selfie and calmly drinking coffee. No way they could have done it at this
+      time frame."
+    - "It\u2019s just in time for people to take a break, you think. As if on cue,
+      <RPNoCrrNoMur> comes in with a congoer. They stay here, order some coffee, and
+      keep talking until the time of the murder. Yup, they\u2019re not killers."
+    - "(if poisoned coffee not the WEP) In desperation, and as a brute-force way of
+      checking your suspicions, you drink coffee straight from the pot. It\u2019s
+      actually pretty bad, but not poisoned. Indeed, Poisoned Coffee can be ruled
+      it out as the murder weapon."
   - Location: 3
     hints:
-    - <i>PlaceHolder</i>
+    - Upon visiting the server room, you immediately notice some things that obviously
+      should be in a proper server room are missing. The only items left behind are
+      <WEP> and <WEP>... No time for the killer to take them; these can be dismissed
+      as murder weapons.
+    - "A staff member escorts you inside. Both of you attempt to look for clues. It\u2019s
+      cold. It\u2019s loud. You want out of there, now. But then you finally manage
+      to get somewhere: <MURDERWEAPON>, <WEP> and <WEP>  are mysteriously missing\u2026"
+    - "(if Keyboard is not the WEP) You quickly scout the place in search of conspicuously
+      missing items. What you do find is a neat pile of keyboards, which a staff member
+      assures you wasn\u2019t touched by any congoer. A keyboard as the murder weapon?
+      Not likely."
   - Location: 4
     hints:
-    - <i>PlaceHolder</i>
+    - "First you hear singing, next the snack wagon comes rolling by. It is operated
+      by Mario himself. Well, someone dressed as him, at least. You smile, as his
+      joy fills you with warmth and determination. You find <RPNoCrrNoMur> enjoying
+      their potato chips. Don\u2019t think they\u2019re gonna murder today."
+    - "You go up to a sponsor's panel, and ask the representative if he saw anything
+      wrong. \u201CCome to think about it,\u201D he utters, \u201C<RPNoCrrNoMur> and
+      <MUR> looked kinda odd.\u201D They went in and out of the murder area, he recalls.
+      Hmm."
+    - You watch a congoer play around in a virtual world, wearing a headset. A small
+      crowd gathers around them, as they try to orient themselves. <RPNoCrrNoMur>  enjoying
+      the show, up until the time of the murder. They appear to be clear.
   - Location: 5
     hints:
-    - <i>PlaceHolder</i>
+    - "You go out the door to get some fresh air. You\u2019ve had enough of this time
+      travel crap, you say to yourself. As you bathe in the summer sun, you find <RPNoCrrNoMur>,<RPNoCrrNoMur>
+      and <MUR> leaving the venue. You try following one of them, but then you are
+      alerted that one of them ran back and commited the murder."
+    - "There is an impromptu meetup outside, where anyone can step up and talk about
+      whatever they want. <RP> comes up and talks about violent video games with a
+      weirdly roaring passion. It\u2019s creepy, but not incriminating."
   - Location: 6
     hints:
-    - <i>PlaceHolder</i>
+    - You notice a <WEP>  in the corner of the room, and graciously weep a single
+      manly tear as a congoer accidentally destroys it while walking around in a motion
+      capture suit.
+    - "You read the sign on the table: \u201CCaught in the VR world. Email me items\u201D.
+      You chuckle to yourself as you send a photo of <WEP> on the table. It stays
+      there after the murder."
+    - "You clearly witness <MUR>, <RPNoCrrNoMur> and <RPNoCrrNoMur> in the audience
+      for a game design talk. You find yourself really getting into it, but as you
+      remember why you\u2019re here, you find one of the three is mysteriously gone."
   - Location: 7
     hints:
-    - <i>PlaceHolder</i>
+    - "Tentatively, you enter the staff and volunteers room. A puzzled volunteer tries
+      to tell you it\u2019s staff only, but you investigate anyway. It seems that
+      throughout the murder, the <WEP> is still here. It\u2019s not the murder weapon,
+      you deduce, and run away before the staff throw you out of the venue."
+    - You come up to one of the organizers and ask to see the staff room. Inside you
+      very easily spot a <WEP>, <WEP> and a <MURDERWEAPON>. After the murder however,
+      you run back to find one of these items missing.
+    - During a keynote, you sneak inside the staff room. Plowing through the maze
+      of leftover coke and sandwiches, you find they have a <WEP>. No one came to
+      get it, even at the time of the murder.
   - Location: 8
     hints:
-    - <i>PlaceHolder</i>
+    - You had no idea what to expect in the IT department, but you never know. You
+      interview a confused, slouched IT woman who tells you a few people came in throughout
+      the day and asked for <WEP>, <WEP> and <MURDERWEAPON>.
+    - "Under the guise of asking a technical question, you peek inside the IT room.
+      Inside, you clearly see a well-stored <WEP>, and it couldn\u2019t be reached
+      by congoers."
   - Location: 9
     hints:
-    - <i>PlaceHolder</i>
+    - "You want to find that murderer with their pants down. You head to the restroom,
+      and very quickly realize <RPNoCrrNoMurNoGos> is having some \u2018bowel issues\u2019
+      in the nearby stall. These... \u2018issues\u2019 continue into the time of the
+      murde"
+    - "You stand guard at the restroom, making notes of the people going in and out.
+      You recognize <RPNoCrrNoMur>, <RPNoCrrNoMur> and <Mur>. Just as you were about
+      to leave, you catch one of those running towards the crime scene. You don\u2019t
+      catch who exactly."
   - Location: 10
     hints:
-    - <i>PlaceHolder</i>
+    - Finally, some damn peace and quiet. Just as you were about to bathe in the warm
+      air and cool wind, you find <MUR>, <RPnoCrrNoMur> and <RPnoCrrNoMur>, <RPnoCrrNoMur>
+      doing the same. It then comes to light that one of them may have murdered <GHOST>.
+    - Away from the neverending noise and flashy screens, you lay on the soft grass
+      and try to calmly assess the situation. You stare deeper into the gardens, and
+      you spot (RPNoCrr) and (random <RandomAccomplice> rushing back inside. Odd,
+      but not very incriminating.
