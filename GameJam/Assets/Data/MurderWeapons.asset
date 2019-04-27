@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: MurderWeapons
   m_EditorClassIdentifier: 
   Weapons:
-  - Name: Keyboard
+  - Type: 1
+    Name: Keyboard
     Icon: {fileID: 0}
-  - Name: Nerf Gun
+  - Type: 2
+    Name: Nerf Gun
     Icon: {fileID: 0}
-  - Name: Poisoned Coffee
+  - Type: 3
+    Name: Poisoned Coffee
     Icon: {fileID: 0}
-  - Name: Broken Beer Bottle
+  - Type: 4
+    Name: Broken Beer Bottle
     Icon: {fileID: 0}
-  - Name: VGA Cord
+  - Type: 5
+    Name: VGA Cord
     Icon: {fileID: 0}

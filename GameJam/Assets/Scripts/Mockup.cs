@@ -31,6 +31,8 @@ public static class PlayerList
 
     public static List<PlayerInfo> Detectives = new List<PlayerInfo>();
 
+    public static Weapons MurderWeapon;
+
 #if UNITY_EDITOR
     [UnityEditor.InitializeOnLoadMethod]
     private static void AddRandomPlayersInEditor()
@@ -41,8 +43,8 @@ public static class PlayerList
                 "Daddy",
                 "Sony",
                 "Xbox",
-                "Switch",
-                "Hello",
+                //"Switch",
+                //"Hello",
                 //"World",
                 //"Damm",
             }
@@ -50,14 +52,6 @@ public static class PlayerList
             .ToList() );
     }
 #endif
-}
-
-[Serializable]
-public class Weapon
-{
-    public string Name;
-    [PreviewField, PropertyOrder(-1)]
-    public Sprite Icon;
 }
 
 public static class GameSetup
@@ -114,9 +108,14 @@ public static class GameSetup
             PlayerList.Detectives.Add(d);
         }
 
+        PlayerList.MurderWeapon = (Weapons)UnityEngine.Random.Range(1, 6);
+
+        //PlayerList.MurderWeapon = weapons.Weapons.PickRandom();
+
         Debug.Log($@"Roles assigned with {PlayerList.AllPlayers.Count} players
 Murderer: {PlayerList.Murderer.Name}
 Ghost: {PlayerList.Ghost.Name}
+Murder weapon: {PlayerList.MurderWeapon}
 Detectives: {PlayerList.Detectives.Count}
 {string.Join("\n", PlayerList.Detectives.Select(x => " - " + x.Name))}
 Accomplices: {PlayerList.Accomplices.Count}

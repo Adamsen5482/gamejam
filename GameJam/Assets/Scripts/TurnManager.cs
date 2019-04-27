@@ -1,6 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
@@ -79,7 +80,7 @@ public class TurnManager : MonoBehaviour
 
     private void FillTurnQueue()
     {
-        foreach (var p in PlayerList.AllPlayers)
+        foreach (var p in PlayerList.AllPlayers.Shuffle())
         {
             this.turnQueue.Enqueue(p);
         }
@@ -97,7 +98,7 @@ public class TurnManager : MonoBehaviour
 }
 
 
-public static class QueueExtensions
+public static class CollectionExtenions
 {
     public static Queue<T> ToQueue<T>(this IEnumerable<T> collection)
     {
@@ -108,5 +109,29 @@ public static class QueueExtensions
         }
 
         return queue;
+    }
+
+    public static T PickRandom<T>(this IEnumerable<T> collection)
+    {
+        var list = collection.ToList();
+        return list[UnityEngine.Random.Range(0, list.Count)];
+    }
+
+    public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> collection)
+    {
+        var list = collection.ToList();
+
+        for (int i = list.Count - 1; i > 0; i--)
+        {
+            var r = UnityEngine.Random.Range(0, i);
+            var a = list[i];
+            list[i] = list[r];
+            list[r] = a;
+        }
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            yield return list[i];
+        }
     }
 }

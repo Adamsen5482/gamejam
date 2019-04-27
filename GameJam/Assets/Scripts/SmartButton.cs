@@ -12,6 +12,12 @@ public class SmartButton : MonoBehaviour
     private Button button;
     private float lastClick = float.MinValue;
 
+    public bool Interactable
+    {
+        get { return this.button.interactable; }
+        set { this.button.interactable = value; }
+    }
+
     private void Start()
     {
         this.button = this.GetComponent<Button>();

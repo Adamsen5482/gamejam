@@ -17,7 +17,7 @@ public class SetupGamePanel : MonoBehaviour
     public InputField PlayerNameField;
     [Required]
     public Text PlayerNamesText;
-
+    
     [Required, FilePath(Extensions = ".unity")]
     public string GameScenePath;
 

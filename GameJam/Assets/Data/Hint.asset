@@ -12,9 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95c001f6aeb4ed47b893dc59a3dca4e, type: 3}
   m_Name: Hint
   m_EditorClassIdentifier: 
+  Weapons: {fileID: 11400000, guid: 14d5784d10890044dbf1a8a804891186, type: 2}
   hintitems:
-  - Location: Lounge
+  - Location: 1
     hints:
     - You sit in the lounge, pretending to enjoy a bestselling thriller novel. You
       lose yourself reading the book however, and barely miss someone entering the
-      crime scene. Their hair and shape of their head reminds you of RPNoMurNoCrrNoGos.
+      crime scene. Their hair and shape of their head reminds you of <RPNoMurNoCrrNoGos>.
+    - <i>PlaceHolder</i>
+  - Location: 2
+    hints:
+    - THE MURDERER IS <MURDERER>!
+  - Location: 3
+    hints:
+    - <i>PlaceHolder</i>
+  - Location: 4
+    hints:
+    - <i>PlaceHolder</i>
+  - Location: 5
+    hints:
+    - <i>PlaceHolder</i>
+  - Location: 6
+    hints:
+    - <i>PlaceHolder</i>
+  - Location: 7
+    hints:
+    - <i>PlaceHolder</i>
+  - Location: 8
+    hints:
+    - <i>PlaceHolder</i>
+  - Location: 9
+    hints:
+    - <i>PlaceHolder</i>
+  - Location: 10
+    hints:
+    - <i>PlaceHolder</i>

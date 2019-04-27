@@ -37,7 +37,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
 
     private string FillFlavorText(PlayerInfo player)
     {
-        string ghostPlayerText = $"THE GHOST IS {PlayerList.Ghost.Name.FormatPlayerName()}.";
+        string ghostPlayerText = $"THE GHOST IS {PlayerList.Ghost.Name.FormatName()}.";
 
         switch (player.Role)
         {
@@ -51,11 +51,11 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     }
                     else if (count == 1)
                     {
-                        accomplicesText = $"YOUR FRIEND IS {PlayerList.Accomplices[0].Name.FormatPlayerName()}.";
+                        accomplicesText = $"YOUR FRIEND IS {PlayerList.Accomplices[0].Name.FormatName()}.";
                     }
                     else
                     {
-                        accomplicesText = $"YOUR ACCOMPLICES ARE {string.Join(", ", PlayerList.Accomplices.Take(count - 1).Select(x => x.Name.FormatPlayerName()))} and {PlayerList.Accomplices[count - 1].Name.FormatPlayerName()}.";
+                        accomplicesText = $"YOUR ACCOMPLICES ARE {string.Join(", ", PlayerList.Accomplices.Take(count - 1).Select(x => x.Name.FormatName()))} and {PlayerList.Accomplices[count - 1].Name.FormatName()}.";
                     }
 
                     return $"YOU ARE THE MURDERER!\n{accomplicesText}\n{ghostPlayerText}";
@@ -75,14 +75,14 @@ public class ShowPlayerRoleTurn : PlayerTurn
                     }
                     else if (count == 1)
                     {
-                        accomplicesText = $"YOUR FRIEND IS {other[0].Name.FormatPlayerName()}.";
+                        accomplicesText = $"YOUR FRIEND IS {other[0].Name.FormatName()}.";
                     }
                     else
                     {
-                        accomplicesText = $"YOUR FRIENDS ARE {string.Join(", ", other.Take(count - 1).Select(x => x.Name.FormatPlayerName()))} AND {other[count - 1].Name.FormatPlayerName()}.";
+                        accomplicesText = $"YOUR FRIENDS ARE {string.Join(", ", other.Take(count - 1).Select(x => x.Name.FormatName()))} AND {other[count - 1].Name.FormatName()}.";
                     }
 
-                    return $"YOU ARE AN ACCOMPLICE!\nTHE MURDERER IS {PlayerList.Murderer.Name.FormatPlayerName()}.\n{accomplicesText}\n{ghostPlayerText}";
+                    return $"YOU ARE AN ACCOMPLICE!\nTHE MURDERER IS {PlayerList.Murderer.Name.FormatName()}.\n{accomplicesText}\n{ghostPlayerText}";
                 }
 
             case PlayerRole.Detective:
@@ -116,7 +116,7 @@ public class ShowPlayerRoleTurn : PlayerTurn
 
 public static class StringUtils
 {
-    public static string FormatPlayerName(this string name)
+    public static string FormatName(this string name)
     {
         return $"<color=#FF585D>{name.ToUpper()}</color>";
     }
