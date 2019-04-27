@@ -39,6 +39,7 @@ public class Hint : ScriptableObject
             .Replace("<RPNoCrrNoMurNoGos1>", queue.Dequeue().Name.FormatName())
             .Replace("<RPNoCrrNoMurNoGos2>", queue.Dequeue().Name.FormatName())
             .Replace("<RPNoCrrNoMurNoGos3>", queue.Dequeue().Name.FormatName())
+            // use once
             .Replace("<RPNoCrrNoMur>", PlayerList.AllPlayers.Where(x => x.Role != PlayerRole.Murderer || x != currentPlayer).PickRandom().Name.FormatName())
             .Replace("<RPNoCrrNoGos>", PlayerList.AllPlayers.Where(x => x.Role != PlayerRole.Ghost || x != currentPlayer).PickRandom().Name.FormatName())
             .Replace("<RPNoCrr>", PlayerList.AllPlayers.Where(x => x != currentPlayer).PickRandom().Name.FormatName())
@@ -70,5 +71,6 @@ public class HintItem
 {
     public Location Location;
     
+    [TextArea]
     public List<string> hints;
 }
