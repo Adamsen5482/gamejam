@@ -22,10 +22,12 @@ public class SmartButton : MonoBehaviour
     {
         this.button = this.GetComponent<Button>();
         this.button.onClick.AddListener(this.OnButtonClicked);
+        this.ClickAction.AddListener(() => Audiomanager.instance.playButtonClick());
     }
 
     private void OnButtonClicked()
     {
+        
         if (this.RequireDoubleClick == false)
         {
             this.ClickAction.Invoke();
