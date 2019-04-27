@@ -37,9 +37,9 @@ MonoBehaviour:
       anything useful, a barista motions towards <RPNoCrrNoMurNoGos1>, as they\u2019re
       taking a selfie and calmly drinking coffee. Doesn't look like a murder thing."
     - "It\u2019s just in time for people to take a break, you think. As if on cue,
-      <RPNoCrrNoMurNoGos1>, <LIE> and <MUR> come in with a congoer. They stay here,
-      order some coffee, and leave. Both were found next to the crime scene at the
-      same time."
+      <RPNoCrrNoMurNoGos1> and <MUR> come in with a congoer. They stay here, order
+      some coffee, and leave. Both were found next to the crime scene at the same
+      time."
     - "It\x19s just in time for people to take a break, you think. As if on cue, <MUR>
       and <RPNoCrrNoMurNoGos1> come in with a congoer. They stay here, order some
       coffee, and leave. Both were found next to the crime scene at the same time."
@@ -68,7 +68,7 @@ MonoBehaviour:
       and <MUR> looked kinda odd. \u201DThey went in and out of the murder area, he
       recalls. Hmm."
     - "You go up to a sponsor's panel, and ask the representative if he saw anything
-      wrong. \x1CCome to think about it,\x1D he utters, \x1C<MUR> and <RPNoCrrNoMur>
+      wrong. \x1CCome to think about it,\x1D he utters, \x1C<MUR> and <RPNoCrrNoMurNoGos1>
       looked kinda odd.\x1D They went in and out of the murder area, he recalls. Hmm."
     - You watch a congoer play around in a virtual world, wearing a headset. A small
       crowd gathers around them, as the congoer tries, and fails, to orient themselves.
@@ -77,17 +77,19 @@ MonoBehaviour:
   - Location: 5
     hints:
     - You go out the door to get some fresh air. As you bathe in the summer sun, you
-      find <RPNoCrrNoMurNoGos1>, <LIE> and <MUR> leaving the venue. You try following
-      one of them, but then you are alerted that one of them ran back and commited
-      the murder.
+      find <LIE> and <MUR> leaving the venue. You try following one of them, but then
+      you are alerted that one of them ran back and commited the murder.
+    - You go out the door to get some fresh air. As you bathe in the summer sun, you
+      find <MUR> and <LIE> leaving the venue. You try following one of them, but then
+      you are alerted that one of them ran back and commited the murder.
     - You go out the door to get some fresh air. As you bathe in the summer sun, you
       find <RPNoCrrNoMurNoGos1> and <MUR> leaving the venue. You try following one
       of them, but then you are alerted that one of them ran back and commited the
       murder.
     - You go out the door to get some fresh air. As you bathe in the summer sun, you
-      find <RPNoCrrNoMurNoGos1>, <MUR> and <LIE> leaving the venue. You try following
-      one of them, but then you are alerted that one of them ran back and commited
-      the murder.
+      find <RPNoCrrNoMurNoGos2> and <RPNoCrrNoMurNoGos1> leaving the venue. You try
+      following one of them, but then you are alerted that one of them ran back and
+      commited the murder.
   - Location: 6
     hints:
     - You notice a <WEP> in the corner of the room, and graciously weep a single manly
