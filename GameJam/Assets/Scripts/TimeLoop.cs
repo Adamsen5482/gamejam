@@ -1,46 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class TimeLoop : MonoBehaviour
 {
     public Text textbox;
-  
-    private void OnEnable()
+
+    private string text;
+
+    private void Awake()
     {
-        ScrollingText(textbox.text);
-        Image i = GetComponent<Image>();
-        
+        this.text = this.textbox.text;
+    }
+    
+    public Coroutine ScrollingText(string text)
+    {
+        return this.StartCoroutine(textscrollstart(text, this.textbox));
     }
 
-    void ScrollingText(string text)
+    public Coroutine ScrollingText()
     {
-        string[] chars = new string[text.Length];
-        for (int i = 0; i < text.Length; i++)
-        {
-            chars[i] = text[i].ToString();
-        }
-
-        StartCoroutine(textscrollstart(chars, textbox));
+        return this.StartCoroutine(textscrollstart(this.text, this.textbox));
     }
 
-    public static IEnumerator textscrollstart(string[] text, Text textbox)
+    public static IEnumerator textscrollstart(string text, Text textbox)
     {
-       
         textbox.text = "";
+
+        StringBuilder builder = new StringBuilder();
+
         for (int i = 0; i < text.Length; i++)
-        {
-            float r = Random.Range(0, 0.005f);
-            if (text[i] == ".")
+        { 
+            builder.Append(text[i]);
+
+            if (i % 2 == 0)
             {
-                yield return new WaitForSeconds(0.01f + r);
+                float r = Random.Range(0, 0.005f);
+                textbox.text = builder.ToString();
+                yield return new WaitForSeconds(0.001f+r);
             }
-            textbox.text += text[i];
-            
-            yield return new WaitForSeconds(0.001f+r);
         }
-      
-        yield return null;
-      
+
+        textbox.text = text;
+
+        yield return new WaitForSeconds(0.2f);
     }
 }

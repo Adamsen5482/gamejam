@@ -15,6 +15,9 @@ public class TurnManager : MonoBehaviour
     public PlayerTurn ShowPlayerRoleTurn;
 
     [Required]
+    public TimeLoop TimeLoop;
+
+    [Required]
     public PlayerTurn PublicClueRevealTurn;
 
     [Required]
@@ -62,6 +65,11 @@ public class TurnManager : MonoBehaviour
         // Public clue reveal.
         Debug.Log(">First clue reveal");
         yield return this.StartCoroutine(this.HidePanel.ShowHidePanel("EVERYONE"));
+
+        // IMMERSION
+        this.TimeLoop.gameObject.SetActive(true);
+        yield return this.TimeLoop.ScrollingText();
+        this.TimeLoop.gameObject.SetActive(false);
 
         this.PublicClueRevealTurn.gameObject.SetActive(true);
         yield return this.StartCoroutine(this.PublicClueRevealTurn.RunTurn(null));
