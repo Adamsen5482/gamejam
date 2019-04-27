@@ -9,6 +9,7 @@ public class VoteButton : MonoBehaviour
     public Button SelectButton;
     public Button ConfirmButton;
     public Image ButtonBackground;
+    public Image KnifeIcon;
 
     public Color DefaultColor;
     public Color SelectedColor;
@@ -40,12 +41,14 @@ public class VoteButton : MonoBehaviour
     {
         this.ButtonBackground.color = this.DefaultColor;
         this.ConfirmButton.gameObject.SetActive(false);
+        this.KnifeIcon.gameObject.SetActive(false);
     }
 
     private void Selected()
     {
         this.OnSelect.Invoke();
         this.ButtonBackground.color = this.SelectedColor;
+        this.KnifeIcon.gameObject.SetActive(true);
         this.ConfirmButton.gameObject.SetActive(true);
     }
 
