@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82de8513c6ea2b449a6bb5ef5dc9334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameoverPanel: {fileID: 0}
   HidePanel: {fileID: 3847631494335130341}
   ShowPlayerRoleTurn: {fileID: 1626887253}
   PublicClueRevealTurn: {fileID: 2936820410096032764}
@@ -1015,6 +1016,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1288920014}
     m_Modifications:
+    - target: {fileID: 1218161221344625278, guid: ae7a5b1e0ebed3b448c9f232be69ec53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3847631492794765201, guid: ae7a5b1e0ebed3b448c9f232be69ec53,
         type: 3}
       propertyPath: m_Name
@@ -1129,11 +1135,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218161221344625278, guid: ae7a5b1e0ebed3b448c9f232be69ec53,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1218161221344625277, guid: ae7a5b1e0ebed3b448c9f232be69ec53,
         type: 3}

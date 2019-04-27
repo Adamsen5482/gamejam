@@ -17,17 +17,22 @@ MonoBehaviour:
   - Marks on the ground indicate the murder weapon cannot be <WEP_NOTMURDER>.
   - "Considering the impact wounds on <GHOST>\u2019s body, we can safely rule out
     <WEP_NOTMURDER> as the murder weapon."
-  - Blood patterns on the ground and walls indicate that <WEP_NOTMURDER> cannot be
-    the murder weapon.
-  - "<GHOST>\u2019s last text exchange with The Council indicated they fell into paranoia\u2026
-    The only people they didn\u2019t think was conspiring against them is <NOTMURDERER1>."
-  - The murderer is <MURDER>! Atleast I think so.
-  - The murderer is <NOTMURDERER1>! Atleast I think so.
-  - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <MURDERER>,
+  - Marks on the ground indicate the murder weapon cannot be <WEP_NOTMURDER>.
+  - Blood patterns on the ground, walls and <GHOST>'s body indicate that <WEP_NOTMURDER>
+    cannot be the murder weapon.
+  - Blood patterns on the ground, walls and <GHOST>'s body indicate that <WEP_NOTMURDER>
+    cannot be the murder weapon.
+  - "<GHOST>\u2019s last text exchange with The Council indicated they fell into some
+    sort of paranoia. The only person they didn\u2019t think was conspiring against
+    them is <NOTMURDERER1>."
+  - "<GHOST>\x19s last text exchange with The Council indicated they fell into some
+    sort of paranoia. The only person they didn\x19t think was conspiring against
+    them is <NOTMURDERER1>."
+  - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <MURDER>,
     <NOTMURDERER1>, <NOTMURDERER2>, and <NOTMURDERER3>'
   - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <NOTMURDERER1>,
-    <MURDERER>, <NOTMURDERER2>, and <NOTMURDERER3>'
+    <MURDER>, <NOTMURDERER2>, and <NOTMURDERER3>'
   - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <NOTMURDERER1>,
-    <NOTMURDERER2>, <MURDERER>, and <NOTMURDERER3>'
+    <NOTMURDERER2>, <MURDER>, and <NOTMURDERER3>'
   - 'A quick forensic test nets some possible perpetrators, but perhaps not all: <NOTMURDERER1>,
     <NOTMURDERER2>, <NOTMURDERER3>, and <MURDERER>'
