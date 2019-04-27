@@ -82,18 +82,23 @@ public class SetupGamePanel : MonoBehaviour
         if(numOfPlayers != null)
         {
             string text;
-            switch(this.addedPlayers.Count)
+            print(this.addedPlayers.Count);
+            switch (this.addedPlayers.Count)
             {
                 case 5:
                     text = "3 DETECTIVES / 1 MURDERER";
                     break;
                 case 6:
+                    text = "3 DETECTIVES / 1 ACCOMPLICE\n1 MURDERER";
+                    break;
                 case 7:
-                    text = "3 DETECTIVES / 1 ACCOMPLICE / 1 MURDERER";
+                    text = "4 DETECTIVES / 1 ACCOMPLICE\n1 MURDERER";
                     break;
                 case 8:
+                    text = "4 DETECTIVES / 2 ACCOMPLICES\n1 MURDERER";
+                    break;
                 case 9:
-                    text = "3 DETECTIVES / 2 ACCOMPLICES / 1 MURDERER";
+                    text = "5 DETECTIVES / 2 ACCOMPLICES\n1 MURDERER";
                     break;
                 default:
                     text = "";
