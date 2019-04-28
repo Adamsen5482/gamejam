@@ -408,7 +408,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 088d08dc425f89f468d708502b5f7ebc, type: 3}
-    m_FontSize: 24
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -487,7 +487,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 088d08dc425f89f468d708502b5f7ebc, type: 3}
-    m_FontSize: 24
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -596,7 +596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7037784590121292021
 RectTransform:
   m_ObjectHideFlags: 0
@@ -669,6 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Picker: {fileID: 6560224931702111355}
   Visitor: {fileID: 4323998930796348244}
+  Transistion: {fileID: 0}
 --- !u!1 &7037784590264728360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,7 +2692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7037784592008835870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3320,7 +3321,7 @@ PrefabInstance:
     - target: {fileID: 1539322191245095784, guid: e09de60dbb350d448b8eeb1e45edf204,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 13.700012
+      value: 13.699951
       objectReference: {fileID: 0}
     - target: {fileID: 1539322191245095784, guid: e09de60dbb350d448b8eeb1e45edf204,
         type: 3}

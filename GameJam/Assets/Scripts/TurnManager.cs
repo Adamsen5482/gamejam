@@ -35,6 +35,9 @@ public class TurnManager : MonoBehaviour
     [Required]
     public EndGame GameoverPanel;
 
+    [Required]
+    public TransistionController Transistion;
+
     private Queue<PlayerInfo> turnQueue = new Queue<PlayerInfo>();
 
     void Awake()
@@ -56,23 +59,30 @@ public class TurnManager : MonoBehaviour
 
             // Show hide panel
             yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name, "FOR YOUR EYES ONLY\nYOU'RE ABOUT TO RECEIVE\nYOUR ROLE IN THIS THRILLER\nIT IS A SECRET FOR YOU ALONE"));
+            yield return this.Transistion.ShowTransistion();
+            this.HidePanel.gameObject.SetActive(false);
 
             this.ShowPlayerRoleTurn.gameObject.SetActive(true);
             yield return this.StartCoroutine(this.ShowPlayerRoleTurn.RunTurn(nextPlayer));
+            yield return this.Transistion.ShowTransistion();
             this.ShowPlayerRoleTurn.gameObject.SetActive(false);
         }
 
         // Public clue reveal.
         Debug.Log(">First clue reveal");
         yield return this.StartCoroutine(this.HidePanel.ShowHidePanel("EVERYONE"));
+        yield return this.Transistion.ShowTransistion();
+        this.HidePanel.gameObject.SetActive(false);
 
         // IMMERSION
         this.TimeLoop.gameObject.SetActive(true);
         yield return this.TimeLoop.ScrollingText();
+        yield return this.Transistion.ShowTransistion();
         this.TimeLoop.gameObject.SetActive(false);
 
         this.PublicClueRevealTurn.gameObject.SetActive(true);
         yield return this.StartCoroutine(this.PublicClueRevealTurn.RunTurn(null));
+        yield return this.Transistion.ShowTransistion();
         this.PublicClueRevealTurn.gameObject.SetActive(false);
 
         // Visit locations
@@ -82,14 +92,18 @@ public class TurnManager : MonoBehaviour
         {
             var nextPlayer = this.NextPlayer();
             yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name, "THE TRUTH IS FOR YOUR EYES ONLY\nYOU MAY TELL THEM LIES\nYOU MAY TELL THEM TRUTH\nTHE CHOICE IS YOURS"));
+            yield return this.Transistion.ShowTransistion();
+            this.HidePanel.gameObject.SetActive(false);
 
             this.InvestigateLocationTurn.gameObject.SetActive(true);
             yield return this.StartCoroutine(this.InvestigateLocationTurn.RunTurn(nextPlayer));
+            yield return this.Transistion.ShowTransistion();
             this.InvestigateLocationTurn.gameObject.SetActive(false);
 
             //yield return this.HidePanel.ShowHidePanel("EVERYONE");
             this.DiscussionTurn.gameObject.SetActive(true);
             yield return this.StartCoroutine(this.DiscussionTurn.RunTurn(null));
+            yield return this.Transistion.ShowTransistion();
             this.DiscussionTurn.gameObject.SetActive(false);
         }
 
@@ -104,9 +118,12 @@ public class TurnManager : MonoBehaviour
         {
             var nextPlayer = this.NextPlayer();
             yield return this.StartCoroutine(this.HidePanel.ShowHidePanel(nextPlayer.Name, "YOU ARE ABOUT TO VOTE\nON WHO YOU THINK DID IT\nTHE GHOST MUST TAKE IT\nINTO CONSIDERATION\nPICK CAREFULLY"));
+            yield return this.Transistion.ShowTransistion();
+            this.HidePanel.gameObject.SetActive(false);
 
             this.VotingTurn.gameObject.SetActive(true);
             yield return this.StartCoroutine(this.VotingTurn.RunTurn(nextPlayer));
+            yield return this.Transistion.ShowTransistion();
             this.VotingTurn.gameObject.SetActive(false);
         }
 
@@ -114,11 +131,15 @@ public class TurnManager : MonoBehaviour
         Debug.Log(">Ghost vote for murder weapon.");
         this.MurderWeaponVotingTurn.gameObject.SetActive(true);
         yield return this.StartCoroutine(this.MurderWeaponVotingTurn.RunTurn(PlayerList.Ghost));
+        yield return this.Transistion.ShowTransistion();
         this.MurderWeaponVotingTurn.gameObject.SetActive(false);
 
         Debug.Log(">End of game.");
         Audiomanager.instance.playFinalVote();
         yield return this.StartCoroutine(this.HidePanel.ShowHidePanel("EVERYONE", "THE TRUTH IS ABOUT TO BE REVEALED..."));
+        yield return this.Transistion.ShowTransistion();
+        this.HidePanel.gameObject.SetActive(false);
+
         this.GameoverPanel.gameObject.SetActive(true);
         this.GameoverPanel.BuildEndGame(this.VotingTurn.GhostVotedPlayer, this.MurderWeaponVotingTurn.VotedWeapon);
     }

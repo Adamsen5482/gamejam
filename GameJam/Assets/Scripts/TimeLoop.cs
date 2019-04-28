@@ -9,21 +9,37 @@ public class TimeLoop : MonoBehaviour
 {
     public Text textbox;
 
+    public SmartButton SkipButton;
+
     private string text;
+
+    private bool finished;
 
     private void Awake()
     {
         this.text = this.textbox.text;
+        this.SkipButton.ClickAction.AddListener(this.OnSkipButton);
     }
     
     public Coroutine ScrollingText(string text)
     {
-        return this.StartCoroutine(textscrollstart(text, this.textbox));
+        return this.StartCoroutine(this.SkippableScrollingText(text));
     }
 
     public Coroutine ScrollingText()
     {
-        return this.StartCoroutine(textscrollstart(this.text, this.textbox));
+        return this.StartCoroutine(this.SkippableScrollingText(this.text));
+    }
+
+    private IEnumerator SkippableScrollingText(string text)
+    {
+        this.finished = false;
+        var c = this.StartCoroutine(textscrollstart(text, this.textbox));
+
+        while (this.finished == false)
+        {
+            yield return null;
+        }
     }
 
     public static IEnumerator textscrollstart(string text, Text textbox)
@@ -49,5 +65,10 @@ public class TimeLoop : MonoBehaviour
         
         yield return new WaitForSeconds(1.5f);
         Audiomanager.instance.UnpauseMenuTrack();
+    }
+
+    private void OnSkipButton()
+    {
+        this.finished = true;
     }
 }

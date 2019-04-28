@@ -39,6 +39,6 @@ public class HideGamePanel : MonoBehaviour
     {
         this.waitForConfirm = false;
         yield return null;
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
     }
 }
