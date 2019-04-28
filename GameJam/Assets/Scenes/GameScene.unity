@@ -1149,6 +1149,23 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 854190297086554838, guid: 75611a1f8662c3c45b75bae818646608,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 144.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 854190297086554833, guid: 75611a1f8662c3c45b75bae818646608,
+        type: 3}
+      propertyPath: m_Text
+      value: 'YOU HAVE NO ACCOMPLICES.
+
+        THE VICTIM IS TOBIAS AND YOU KILLED THEM WITH BROKEN BEER BOTTLE'
+      objectReference: {fileID: 0}
+    - target: {fileID: 854190297086554833, guid: 75611a1f8662c3c45b75bae818646608,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75611a1f8662c3c45b75bae818646608, type: 3}
 --- !u!1001 &1756414721190640741
@@ -1884,7 +1901,7 @@ PrefabInstance:
     - target: {fileID: 7037784590121292022, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7037784590121292021, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
@@ -1994,7 +2011,7 @@ PrefabInstance:
     - target: {fileID: 7037784592008835871, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3265747076204563806, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
