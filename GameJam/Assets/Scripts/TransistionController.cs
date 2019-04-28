@@ -8,15 +8,6 @@ public class TransistionController : MonoBehaviour
 {
     public float TransisitionTime;
 
-    //public RectTransform Rect => this.transform as RectTransform;
-
-    //[ShowInInspector] public Vector2 AnchoredPosition => this.Rect.anchoredPosition;
-    //[ShowInInspector] public Vector3 AnchoredPosition3D => this.Rect.anchoredPosition3D;
-    //[ShowInInspector] public Vector2 AnchorMin => this.Rect.anchorMin;
-    //[ShowInInspector] public Vector2 AnchorMax => this.Rect.anchorMax;
-    //[ShowInInspector] public Rect RectRect => this.Rect.rect;
-    //[ShowInInspector] public Vector2 Size => this.Rect.sizeDelta;
-
     [Button]
     public YieldInstruction ShowTransistion()
     {

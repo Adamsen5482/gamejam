@@ -34,7 +34,7 @@ public class TimeLoop : MonoBehaviour
     private IEnumerator SkippableScrollingText(string text)
     {
         this.finished = false;
-        var c = this.StartCoroutine(textscrollstart(text, this.textbox));
+        var c = this.StartCoroutine(this.textscrollstart(text));
 
         while (this.finished == false)
         {
@@ -42,9 +42,9 @@ public class TimeLoop : MonoBehaviour
         }
     }
 
-    public static IEnumerator textscrollstart(string text, Text textbox)
+    public IEnumerator textscrollstart(string text)
     {
-        textbox.text = "";
+        this.textbox.text = "";
 
         StringBuilder builder = new StringBuilder();
 
@@ -61,10 +61,11 @@ public class TimeLoop : MonoBehaviour
             }
         }
 
-        textbox.text = text;
+        this.textbox.text = text;
         
         yield return new WaitForSeconds(1.5f);
         Audiomanager.instance.UnpauseMenuTrack();
+        this.finished = true;
     }
 
     private void OnSkipButton()
