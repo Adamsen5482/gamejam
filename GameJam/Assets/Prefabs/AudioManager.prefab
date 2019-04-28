@@ -51,7 +51,7 @@ MonoBehaviour:
   gamebegin: {fileID: 0}
   menutrack: {fileID: 212927785730541910}
   buttonClick: {fileID: 212927785730541911}
-  MurderWinTrack: {fileID: 0}
+  TypeWriter: {fileID: 212927785730541930}
   GhostWinTrack: {fileID: 0}
   FinalVote: {fileID: 212927785730541908}
 --- !u!82 &212927785730541910
@@ -448,7 +448,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bdca2a2c1c6aa8f4fb8cbc28fbb7ab30, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
