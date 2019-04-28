@@ -266,6 +266,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5164097291502873869, guid: b944492898e2da742b57dbf11c47d920,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.400024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b944492898e2da742b57dbf11c47d920, type: 3}
 --- !u!224 &170617768 stripped
@@ -1706,7 +1711,7 @@ PrefabInstance:
     - target: {fileID: 4765180183967472882, guid: 148486a4ecc7cb945a449e9d84995c86,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.399994
+      value: 6.4000244
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148486a4ecc7cb945a449e9d84995c86, type: 3}
@@ -1879,7 +1884,7 @@ PrefabInstance:
     - target: {fileID: 7037784590121292022, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7037784590121292021, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
@@ -1989,17 +1994,27 @@ PrefabInstance:
     - target: {fileID: 7037784592008835871, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3265747076204563806, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8114694991045223382, guid: 915169ed07f076642997666ee64f58a5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 13.700012
+      value: 13.699951
+      objectReference: {fileID: 0}
+    - target: {fileID: 937616644060629316, guid: 915169ed07f076642997666ee64f58a5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143487516555550987, guid: 915169ed07f076642997666ee64f58a5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 915169ed07f076642997666ee64f58a5, type: 3}

@@ -35,17 +35,19 @@ public class TimeLoop : MonoBehaviour
         for (int i = 0; i < text.Length; i++)
         { 
             builder.Append(text[i]);
-
+            Audiomanager.instance.PlayTypeWriter();
             if (i % 2 == 0)
             {
                 float r = Random.Range(0, 0.005f);
                 textbox.text = builder.ToString();
                 yield return new WaitForSeconds(0.001f+r);
+                
             }
         }
 
         textbox.text = text;
-
-        yield return new WaitForSeconds(0.2f);
+        
+        yield return new WaitForSeconds(1.5f);
+        Audiomanager.instance.UnpauseMenuTrack();
     }
 }
