@@ -17,35 +17,33 @@ MonoBehaviour:
   - Location: 1
     hints:
     - You sit in the lounge, pretending to enjoy a bestselling thriller novel. You
-      lose yourself reading the book however, and barely miss someone entering the
-      crime scene. Their hair and shape of their head reminds you of <RP>.
+      lose yourself reading the book however, and barely miss someone curiously entering
+      the crime scene. Their hair and shape of their head reminds you of <RP>.
+    - You sit in the lounge, pretending to enjoy a bestselling thriller novel. You
+      lose yourself reading the book however, and barely miss someone curiously entering
+      the crime scene. Their hair and shape of their head reminds you of <MUR>.
     - Sitting in the lounge, you enjoy some mediocre appetizers and try to take in
       the atmosphere. You find <MUR> and <RPNoCrrNoMurNoGos1> are having a very vested
-      interest in <GHOST>...
+      interest in <GHOST>... Could one of them have killed them?
     - Sitting in the lounge, you enjoy some mediocre appetizers and try to take in
-      the atmosphere. You find <MUR> and <LIE> are having a very vested interest in
-      <GHOST>...
+      the atmosphere. You find <RPNoCrrNoMurNoGos1> and <MUR> are having a very vested
+      interest in <GHOST>... Could one of them have killed them?
     - You make some small talks with whoever you find to get information. You try
       to understand what a Unity developer is banging on about, when you spot <RPNoCrrNoGos>
       walking around anxiously...
-    - Sitting in the lounge, you enjoy some mediocre appetizers and try to take in
-      the atmosphere. You find <RPNoCrrNoMurNoGos1> and <MUR> are having a very vested
-      interest in <GHOST>...
   - Location: 2
     hints:
     - "You rush to the cafeteria to interrogate the crew. Fearing you might not get
       anything useful, a barista motions towards <RPNoCrrNoMurNoGos1>, as they\u2019re
       taking a selfie and calmly drinking coffee. Doesn't look like a murder thing."
-    - "It\u2019s just in time for people to take a break, you think. As if on cue,
+    - "It\u2019s just the time for people to take a break, you think. As if on cue,
       <RPNoCrrNoMurNoGos1> and <MUR> come in with a congoer. They stay here, order
       some coffee, and leave. Both were found next to the crime scene at the same
       time."
-    - "It\x19s just in time for people to take a break, you think. As if on cue, <MUR>
-      and <RPNoCrrNoMurNoGos1> come in with a congoer. They stay here, order some
-      coffee, and leave. Both were found next to the crime scene at the same time."
-    - "It\x19s just in time for people to take a break, you think. As if on cue, <MUR>
-      and <RPNoCrrNoMurNoGos1> come in with a congoer. They stay here, order some
-      coffee, and leave. Both were found next to the crime scene at the same time."
+    - "It\x19's just the time for people to take a break, you think. As if on cue,
+      <MUR> and <RPNoCrrNoMurNoGos1> come in with a congoer. They stay here, order
+      some coffee, and leave. Both were found next to the crime scene at the same
+      time."
   - Location: 3
     hints:
     - Upon visiting the server room, you immediately notice some things that obviously
@@ -68,8 +66,8 @@ MonoBehaviour:
       and <MUR> looked kinda odd. \u201DThey went in and out of the murder area, he
       recalls. Hmm."
     - "You go up to a sponsor's panel, and ask the representative if he saw anything
-      wrong. \x1CCome to think about it,\x1D he utters, \x1C<MUR> and <RPNoCrrNoMurNoGos1>
-      looked kinda odd.\x1D They went in and out of the murder area, he recalls. Hmm."
+      wrong. \x1CCome to think about it,\x1D he utters, \x1C<LIE> looked kinda odd.\x1D
+      They went in and out of the murder area, he recalls. Hmm."
     - You watch a congoer play around in a virtual world, wearing a headset. A small
       crowd gathers around them, as the congoer tries, and fails, to orient themselves.
       <RPNoCrrNoMurNoGos1> is enjoying the show, up until the time of the murder.
@@ -77,19 +75,13 @@ MonoBehaviour:
   - Location: 5
     hints:
     - You go out the door to get some fresh air. As you bathe in the summer sun, you
-      find <LIE> and <MUR> leaving the venue. You try following one of them, but then
-      you are alerted that one of them ran back and commited the murder.
-    - You go out the door to get some fresh air. As you bathe in the summer sun, you
-      find <MUR> and <LIE> leaving the venue. You try following one of them, but then
-      you are alerted that one of them ran back and commited the murder.
-    - You go out the door to get some fresh air. As you bathe in the summer sun, you
       find <RPNoCrrNoMurNoGos1> and <MUR> leaving the venue. You try following one
       of them, but then you are alerted that one of them ran back and commited the
       murder.
     - You go out the door to get some fresh air. As you bathe in the summer sun, you
-      find <RPNoCrrNoMurNoGos2> and <RPNoCrrNoMurNoGos1> leaving the venue. You try
-      following one of them, but then you are alerted that one of them ran back and
-      commited the murder.
+      find <MUR> and <RPNoCrrNoMurNoGos1> leaving the venue. You try following one
+      of them, but then you are alerted that one of them ran back and commited the
+      murder.
   - Location: 6
     hints:
     - You notice a <WEP> in the corner of the room, and graciously weep a single manly
@@ -105,11 +97,11 @@ MonoBehaviour:
       that throughout the murder, the <WEP> is still here. It\u2019s not the murder
       weapon, you deduce, and run away before the staff throw you out of the venue."
     - You come up to one of the organizers and ask to see the staff room. Inside you
-      very easily spot a <WEP> and a <MURDERWEAPON>. After the murder however, you
-      run back and understand someone took one of these items and killed <GHOST>.
+      very easily spot a <WEP>, a <WEP2>, and a <MURDERWEAPON>. After the murder however,
+      you run back and understand someone took one of these items and killed <GHOST>.
     - You come up to one of the organizers and ask to see the staff room. Inside you
-      very easily spot a <MURDERWEAPON> and a <WEP>. After the murder however, you
-      run back and understand someone took one of these items and killed <GHOST>.
+      very easily spot a <MURDERWEAPON>, a <WEP2>, and a <WEP>. After the murder however,
+      you run back and understand someone took one of these items and killed <GHOST>.
     - During a keynote, you sneak inside the staff room. Plowing through the maze
       of leftover cola and sandwiches, you find they own a <WEP>. No one came to get
       it, even at the time of the murder.
@@ -135,10 +127,10 @@ MonoBehaviour:
     - "You want to find that murderer with their pants down. You head to the restroom,
       and very quickly realize <RPNoCrrNoMurNoGos1> is having some \u2018bowel issues\u2019
       in the nearby stall. These... \u2018issues\u2019 continue into the time of the
-      murde"
+      murder."
     - "You want to find that murderer with their pants down. You head to the restroom,
       and very quickly realize <RPNoCrrNoMurNoGos1> is having some \x18bowel issues\x19
-      in the nearby stall. These... \x18issues\x19 continue into the time of the murde"
+      in the nearby stall. These... \x18issues\x19 continue into the time of the murder."
     - "You stand guard at the restroom, making notes of the people going in and out.
       You recognize <RPNoCrrNoMurNoGos1>, <RPNoCrrNoMurNoGos2> and <MUR>. Just as
       you were about to leave, you catch one of those running towards the crime scene.
@@ -147,18 +139,18 @@ MonoBehaviour:
       You recognize <RPNoCrrNoMurNoGos1> and <MUR>. Just as you were about to leave,
       you catch one of those running towards the crime scene. You don\x19t recognize
       anyone in particular."
-    - "You stand guard at the restroom, making notes of the people going in and out.
-      You recognize <LIE> and <RPNoCrrNoMurNoGos1>. Just as you were about to leave,
-      you catch one of those running towards the crime scene. You don\x19t recognize
-      anyone in particular."
+    - You stand guard at the restroom, making notes of the people going in and out.
+      You recognize <LIE>... Just as you were about to leave, you catch them suspiciously
+      running towards the crime scene.
   - Location: 10
     hints:
     - Finally, some damn peace and quiet. Just as you were about to enjoy the warm
       air and cool wind, you find <MUR> and <RPNoCrrNoMurNoGos1> doing the same. It
       then comes to light that one of them could have murdered <GHOST>.
     - Finally, some damn peace and quiet. Just as you were about to enjoy the warm
-      air and cool wind, you find <RPNoCrrNoMurNoGos1>, <MUR> doing the same. It then
-      comes to light that one of them could have murdered <GHOST>.
+      air and cool wind, you find <RPNoCrrNoMurNoGos1>, <MUR> and <RPNoCrrNoMurNoGos2>
+      doing the same. It then comes to light that one of them could have murdered
+      <GHOST>.
     - Away from the neverending noise and flashy screens, you lay on the soft grass
       and try to calmly assess the situation. You stare deeper into the gardens, and
       you spot <MUR> and <GHOST> rushing back inside. Odd, but not solid evidence.
